@@ -3,10 +3,15 @@
     <div class="row box p-3">
         <!-- Start Of Left News Section -->
         <div class=" col-xs-12  col-sm-12 col-md-12 col-lg-6  box1">
-            <h1 class="title">INDIA<b style="color: blue;font-size: 17px;">&nbsp;&nbsp; ....Sabse Tej</b></h1>
             <!-- start of left sub section -->
             <div class="news-left">
-                <h5 class=" px-3 py-1 text-center text-white">Top News</h5>
+                <div class="nav-links d-flex mb-3 ">
+                    <a class="mr-2" (click)="goHome()">Home</a>
+                    <a style="border-right:none;pointer-events:none;color:blue;" (click)="gotoIndia()">India</a>
+                  </div>
+                <h1 class="title">INDIA</h1>
+                <h6 class="sub-title" >Latest News From All Over India</h6>
+                <h5 class=" px-3 py-1 mt-3 text-center text-white">Top News</h5>
                 <!-- Start Of Left First News -->
                 <div class="news-box news1 col-12 col-sm-12 col-md-12 d-flex mt-3 nopadding">
                     <div class=" headline-box nopadding col-8 col-sm-8 col-md-8 d-block routinglinks">
@@ -123,8 +128,7 @@
         <div class="col-xs-12  col-sm-12 col-md-12 col-lg-6  box2">
             <!-- Start of Right Sub Section -->
             <div class="news-right ">
-                <h1 class="pl-4  text-white">News</h1>
-                <h5 class="px-2 py-1 mt-2 text-center text-white">What's Going On</h5>
+                <h1 class="pl-4  text-white">Whats Going On</h1>
                 <!-- Start of Right News 1 -->
                 <div class="news-box news1 col-12 col-sm-12  d-flex mt-3 nopadding">
                     <div class=" headline-box nopadding col-8 col-sm-8 d-block routinglinks">

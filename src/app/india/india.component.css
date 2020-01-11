@@ -4,8 +4,14 @@ h1,h2,h3,h4,h5,h6
     padding: 0px 0px 0px 0px ;
 }
 .title {
-    
-    color: red;
+    color:black;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.subtitle{
+    color: rgb(70, 68, 68);
+    font-size: 15px;;
 }
 hr{
     border: 1px dashed grey;
@@ -14,9 +20,18 @@ hr{
     border-right: 6px solid orangered;
     border-radius: 5px;  
 }
+.nav-links a{
+    font-size: 20px;
+    border-right: 1px solid #58595b;
+    padding: 0 8px;
+    cursor: pointer;   
+}
+.nav-links a:hover{
+   color:skyblue;
+}
 .news-left
 {
-    margin-top: 46px;
+    margin-top: 10px;
     margin-right: 20px;
 }
 .news-left h5
@@ -31,8 +46,9 @@ hr{
 }
 .news-right h1
 {
-    background-color:#af07be;
-    font-family:  'Arial Narrow Bold', sans-serif;
+    background-color:#2b0a86;
+    font-family: Arial;
+    font-size: 32px;
 }
 .news-right h5{
     background-color:#a00606;
@@ -44,7 +60,7 @@ hr{
     margin: none;
 }
 img:hover  {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: all .5s ease 0s;
     cursor: pointer;
 }
@@ -83,6 +99,10 @@ img:hover  {
 }
 
 @media only screen and (max-width: 600px) {
+    .box{
+        margin: 80px 10px 0;
+        /* background-color: rgb(87, 12, 105); */
+    }
     .box1 {
         width: 100%;
         border-right:none; 
@@ -100,9 +120,16 @@ img:hover  {
     .news-left{
         margin-right: 0;
     }
+    .social-icons-img{
+        margin-left: 6px;
+    }
 }
 
 @media only screen and (min-width: 600px) {
+    .box{
+        margin: 80px 15px 0;
+        /* background-color: aquamarine; */
+    }
     .box1 {
         width: 100%;
         border-right: none;
@@ -120,6 +147,11 @@ img:hover  {
     }
 }
 @media only screen and (min-width: 768px) {
+    .box{
+        display: block;
+        margin: 80px 20px 0;
+        /* background-color: rgb(141, 151, 5); */
+    }
     .box1 {
         border-right: none;
       }
@@ -127,11 +159,6 @@ img:hover  {
            width: 100%;
            height: 200px;
        }
-      
-     .box{
-         display: block;
-         margin: 20px 20px;
-     }
      h5{
          text-align: left;
      }
@@ -143,8 +170,9 @@ img:hover  {
 
 @media only screen and (min-width: 992px) {
     .box{
+        margin: 80px 40px 0;
         display: flex;
-        margin: 20px 20px;
+        /* background-color: rgb(231, 47, 78); */
    }
     .box1 {
         width: 100%;
@@ -165,11 +193,11 @@ img:hover  {
     }
 }
 
-@media only screen and (min-width: 1200px) {
-       .box{
-           margin: 20px 60px;
-           
-        }  
+@media only screen and (min-width: 1200px) { 
+        .box{
+        margin: 80px 100px 0;
+        /* background-color: pink; */
+        }
        .news-img{
             height:150px;
         }
