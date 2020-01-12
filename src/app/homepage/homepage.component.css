@@ -32,11 +32,11 @@ hr{
 }
 .news-right h1
 {
-    background-color:#af07be;
+    background-color:#2f07be;
     font-family:  'Arial Narrow Bold', sans-serif;
 }
 .news-right h5{
-    background-color:#a00606;
+    background-color:#178131;
     width:140px;
     font-size: 16px;
 }
@@ -45,7 +45,7 @@ hr{
     margin: none;
 }
 img:hover  {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: all .5s ease 0s;
     cursor: pointer;
 }
