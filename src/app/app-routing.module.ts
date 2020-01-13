@@ -4,6 +4,7 @@ import { SubcontentComponent } from './subcontent/subcontent.component';
 import { IndiaComponent } from './india/india.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FormComponent } from './form/form.component';
+import { NewsdashboardComponent } from './newsdashboard/newsdashboard.component';
 
 
 const routes: Routes = [
@@ -30,7 +31,13 @@ const routes: Routes = [
     pathMatch: 'full',
     component: FormComponent,
     children: []
-  }
+  },
+  {
+    path: 'dashboard',
+    pathMatch: 'full',
+    component: NewsdashboardComponent,
+    children: []
+  },
 ];
 
 @NgModule({

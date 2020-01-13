@@ -12,6 +12,9 @@ export class FormComponent implements OnInit {
   goHome() {
     this.router.navigate(['']); 
   }
+  gotoNewsDashboard() {
+    this.router.navigate(['dashboard']); 
+  }
   ngOnInit() {}
 
 }

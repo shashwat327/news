@@ -1,0 +1,106 @@
+#header{
+    width:100%;
+    top:0;
+    z-index:9999;  
+    background-color: black;
+}
+.navbar .aaj-tak-title{
+    color:white;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+.navbar .aaj-tak-title .aaj-tak-logo{
+    width:70px;
+    height:50px;
+}
+.log-out{
+    background-color: red;
+    color:white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+/* *************************separation****************************************** */
+
+/********************** separation **************************/
+
+
+main {
+    padding: 10px 15px;
+     background-image:url(/assets/img/blue-bg.jpg);
+	 background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.form-group label{
+    font-weight:500;
+    font-size: 20px;
+}
+.main-form {
+    margin: 0 auto;
+}
+.card-header {
+    background-color: transparent;
+    text-align: center;
+}
+
+.btn-lg.col-md-6 {
+	margin: 10px auto!important;
+    display: block;
+}
+.form-content {
+	margin-bottom:60px;
+}
+
+.form-content .form-control {
+    border-radius: 0;
+
+}
+
+.container.form-content .btn{
+    min-width: 140px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.container.form-content .btn{
+    background-image: linear-gradient(to right, #dc3545, #FCEE21, #dc3545, #dc3545);
+    box-shadow: 0 4px 15px 0 rgba(2, 2, 2, 0.16);
+    box-shadow: 0 4px 15px 0 rgba(2, 2, 2, 0.16);
+}
+.container.form-content .btn:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.header_content h2{
+	font-size:40px;
+	font-weight:bold;
+	margin-bottom:20px;
+}
+.header_content{
+	text-align:center;
+	padding:40px;
+	color:#fff;
+}
+.form-group textarea{
+    width: 100%;
+  height: 100px;
+}

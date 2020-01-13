@@ -1,0 +1,69 @@
+<section id="header">
+    <div class="container-fluid nopadding ">
+      <nav class="navbar  navbar-expand-lg navbar-light nopadding">
+        <a class="navbar-brand pl-5 aaj-tak-title"><img class="aaj-tak-logo" src="assets/img/new2-removebg-preview.png">AAJ TAK</a>
+        <button class="navbar-toggler bg-primary" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-white"></span>
+        </button>
+    
+        <div class="collapse py-2 navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto topnav">
+            <li class="nav-item pr-5">
+              <a class="nav-link text-white log-out" (click)="goHome()"> LOG OUT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+</section>
+
+<main>
+<div class="container form-content mt-5">
+	<!-- <div class="header_content">
+		<h2> AAJ TAK</h2>
+	</div> -->
+	
+	<!-- form card login -->
+	<div class="card col-md-12 main-form" id="login-form">
+		<div class="card-header">
+			<h3 class="mt-2"> NEWS DASHBOARD </h3>
+		</div>
+		<div class="card-body">
+			<form class="form row" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+
+                <div class="form-group d-flex col-md-12">
+                    <label class="col-md-3 text-center">NEWS CATEGORY :</label>
+                    <select class="col-md-9" id="inputState" class="form-control text-center">
+                        <option value="category1">--Select News Category--</option>
+                        <option value="category2">INDIA</option>
+                        <option value="category3">WORLD</option>
+                        <option value="category4">SPORTS</option>
+                        <option value="category5">MOVIES</option>
+                        <option value="category6">BUSINESS</option>
+                    </select>
+                  </div>
+
+				<div class="form-group  d-flex col-md-12">
+					<label class="col-md-3 pt-4 text-center" for="uname1">NEWS HEADLINE :</label>
+                    <textarea class="col-md-9" type="text" class="form-control" name="uname1" id="uname1" required=""></textarea>
+
+				</div>
+				<div class="form-group d-flex col-md-12">
+					<label class="col-md-3 pt-3 text-center" for="name">HEADLINE <br>DESCRIPTION: </label>
+					<textarea class="col-md-9" type="text" class="form-control" name="uname1" ingd="uname1" required=""></textarea>
+				</div>
+				
+				<div class="form-group d-flex col-md-12">
+          <label class="col-md-4 mt-3 text-center" for="name"> UPLOAD HEADLINE IMAGE :</label>
+          <img style="width:40px;height:40px" src="assets/img/Attachment.png" (click)="getFile.click">
+					<input #getFile hidden class="col-md-4" type="file" class="form-control" name="uname1" required="">
+				</div>
+                <button type="submit" class="btn btn-success btn-lg col-md-6 " id="btnLogin"> Submit </button>
+            </form>
+		</div>
+	</div>
+		<!--/Container-->
+</div>
+</main>
+<app-footer></app-footer>
