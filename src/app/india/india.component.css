@@ -23,11 +23,12 @@ hr{
 .nav-links a{
     font-size: 20px;
     border-right: 1px solid #58595b;
-    padding: 0 8px;
+    padding: 0 15px 0 0;
     cursor: pointer;   
 }
 .nav-links a:hover{
-   color:skyblue;
+   color:black;
+   font-weight: bold;
 }
 .news-left
 {

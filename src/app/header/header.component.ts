@@ -16,6 +16,9 @@ export class HeaderComponent implements OnInit {
   gotoIndia() {
     this.router.navigate(['india']); 
   }
+  gotoForm() {
+    this.router.navigate(['form']); 
+  }
   ngOnInit() {
     
   }

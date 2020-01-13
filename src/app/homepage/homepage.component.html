@@ -1,8 +1,33 @@
 <app-header></app-header>
+
 <div class="container-fluid">
     <div class="row box p-3">
+            <!--start code-->
+    <div class="row  py-2" style="width: 100%; margin: 0 auto;">
+        <!--Breaking box-->
+        
+            <div class="d-inline-block d-md-block col-1 col-md-3 col-lg-2 bg-primary text-white text-center py-2 px-2">
+                <i class="fa fa-bolt px-1"  aria-hidden="true" style="font-size: 20px;width:20px"></i>
+                <span class="d-none d-md-inline-block pl-1">Breaking News</span>
+            </div>
+        
+        <!--Breaking content-->
+        <div class="col-11 col-md-9 col-sm-10 col-lg-10 pl-1  text-white" style="background-color: #474645;">
+            <div class="breaking-box pt-2 pb-1">
+                <!--marque-->
+                <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseleave="this.start();">
+                  <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">Technology</span> Google Employees Protest Secret Work on Censored Search Engine for China</a>
+                  <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">Automotive</span> Investors Betting Against Tesla Made $1 Billion on Friday</a>
+                  <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/.html"><span class="position-relative mx-2 badge badge-primary rounded-0">Football</span> World cup 2050 will release in Dubay</a>
+                  <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">Beauty</span> Lemon make your skin fresh and glowing</a>
+                  <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">Sport</span> 5 Takeaways From Elon Musk’s Interview With The Times About Tesla</a>
+                </marquee>
+            </div>
+        </div>
+    </div>
+	<!--end code-->
         <!-- Start Of Left News Section -->
-        <div class=" col-xs-12  col-sm-12 col-md-12 col-lg-6  box1">
+        <div class=" col-xs-12  col-sm-12 col-md-12 col-lg-6  box1 nopadding">
             <h1 class="title">Aaj Tak<b style="color: blue;font-size: 17px;">&nbsp;&nbsp; ....Sabse Tej</b></h1>
             <!-- start of left sub section -->
             <div class="news-left">
@@ -120,10 +145,10 @@
         <!-- End Of Left News Section -->
 
         <!-- Start Of Right News Section -->
-        <div class="col-xs-12  col-sm-12 col-md-12 col-lg-6  box2">
+        <div class="col-xs-12  col-sm-12 col-md-12 col-lg-6  box2 nopadding">
             <!-- Start of Right Sub Section -->
             <div class="news-right ">
-                <h1 class="pl-4  text-white">News</h1>
+                <h1>News</h1>
                 <h5 class="px-2 py-1 mt-2 text-center text-white">What's Going On</h5>
                 <!-- Start of Right News 1 -->
                 <div class="news-box news1 col-12 col-sm-12  d-flex mt-3 nopadding">

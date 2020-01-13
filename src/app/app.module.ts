@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SubcontentComponent } from './subcontent/subcontent.component';
 import { IndiaComponent } from './india/india.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HomepageComponent } from './homepage/homepage.component';
     SubcontentComponent,
     IndiaComponent,
     HomepageComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,

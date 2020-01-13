@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SubcontentComponent } from './subcontent/subcontent.component';
 import { IndiaComponent } from './india/india.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { FormComponent } from './form/form.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,12 @@ const routes: Routes = [
     path: 'sub',
     pathMatch: 'full',
     component: SubcontentComponent,
+    children: []
+  },
+  {
+    path: 'form',
+    pathMatch: 'full',
+    component: FormComponent,
     children: []
   }
 ];

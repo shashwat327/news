@@ -3,6 +3,7 @@
     width:100%;
     top:0;
     z-index:9999;  
+    background-color: #474645;
 }
 .topnav a:hover {
     border-bottom: 3px solid red;
@@ -11,6 +12,24 @@
 a:hover{
     cursor: pointer;
 }
+/* .navbar{
+    background-color: aqua;
+} */
 .nopadding{
     padding: 0 !important;
+}
+.nav-item .nav-link{
+    color: white;
+    font-size: 17px;
+}
+.navbar .aaj-tak-title{
+    color:white;
+    line-height: 40px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+.navbar .aaj-tak-title .aaj-tak-logo{
+    width:70px;
+    height:50px;
 }
