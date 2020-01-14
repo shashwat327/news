@@ -24,6 +24,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { FormComponent } from './form/form.component';
 import { NewsdashboardComponent } from './newsdashboard/newsdashboard.component';
 import { environment } from 'src/environments/environment';
+import { WorldComponent } from './world/world.component';
+import { NewsService } from './shared/news.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { environment } from 'src/environments/environment';
     HomepageComponent,
     FormComponent,
     NewsdashboardComponent,
+    WorldComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,7 @@ import { environment } from 'src/environments/environment';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],
-  providers: [],
+  providers: [NewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
