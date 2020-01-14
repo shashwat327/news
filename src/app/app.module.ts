@@ -12,7 +12,8 @@ import { MatFormFieldModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import {MatRadioModule} from '@angular/material/radio';
 import { AppRoutingModule } from './app-routing.module';
-
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,6 +23,7 @@ import { IndiaComponent } from './india/india.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FormComponent } from './form/form.component';
 import { NewsdashboardComponent } from './newsdashboard/newsdashboard.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { NewsdashboardComponent } from './newsdashboard/newsdashboard.component'
     SidebarModule, AppRoutingModule, AccordionModule,
     InputTextModule, BrowserAnimationsModule, MatSliderModule,
     MatSidenavModule,  FormsModule , MatCheckboxModule, ReactiveFormsModule,
-    MatFormFieldModule, MatInputModule, MatRadioModule
+    MatFormFieldModule, MatInputModule, MatRadioModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
