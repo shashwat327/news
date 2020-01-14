@@ -12,7 +12,7 @@ export class NewsdashboardComponent implements OnInit {
   goHome() {this.router.navigate(['']);}
 
   ngAfterViewInit(){
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = "#eee";
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = "white";
   }
   ngOnInit() {}
 

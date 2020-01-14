@@ -10,7 +10,7 @@
         <div class="collapse py-2 navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto topnav">
             <li class="nav-item pr-5">
-              <a class="nav-link text-white log-out" (click)="goHome()"> LOG OUT</a>
+              <a class="nav-link px-4 text-white log-out" (click)="goHome()"> LOG OUT</a>
             </li>
           </ul>
         </div>
@@ -19,21 +19,21 @@
 </section>
 
 <main>
-<div class="container form-content mt-5">
+<div class="container form-content mt-3">
 	<!-- <div class="header_content">
 		<h2> AAJ TAK</h2>
 	</div> -->
 	
 	<!-- form card login -->
-	<div class="card col-md-12 main-form" id="login-form">
-		<div class="card-header">
-			<h3 class="mt-2"> NEWS DASHBOARD </h3>
+	<div class="card col-md-12 main- nopadding" id="login-form">
+		<div class="card-header text-white nopadding">
+			<h3 class="mt-2 nopadding"> NEWS DASHBOARD </h3>
 		</div>
-		<div class="card-body">
+		<div class="card-body ">
 			<form class="form row" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
 
                 <div class="form-group d-flex col-md-12">
-                    <label class="col-md-3 text-center">NEWS CATEGORY :</label>
+                    <label class="col-md-3 py-1 text-center">NEWS CATEGORY :</label>
                     <select class="col-md-9" id="inputState" class="form-control text-center">
                         <option value="category1">--Select News Category--</option>
                         <option value="category2">INDIA</option>
@@ -44,19 +44,28 @@
                     </select>
                   </div>
 
+                  <div class="form-group d-flex col-md-12">
+                    <label class="col-md-3 py-1 text-center">NEWS SUB-CATEGORY :</label>
+                    <select class="col-md-9" id="inputState" class="form-control text-center">
+                        <option value="category1">--Select News Category--</option>
+                        <option value="category2">Top News</option>
+                        <option value="category3">Whats Going On</option>S
+                    </select>
+                  </div>
+
 				<div class="form-group  d-flex col-md-12">
-					<label class="col-md-3 pt-4 text-center" for="uname1">NEWS HEADLINE :</label>
+					<label class="col-md-3 py-2 text-center" for="uname1" style>NEWS HEADLINE&nbsp; :</label>
                     <textarea class="col-md-9" type="text" class="form-control" name="uname1" id="uname1" required=""></textarea>
 
 				</div>
 				<div class="form-group d-flex col-md-12">
-					<label class="col-md-3 pt-3 text-center" for="name">HEADLINE <br>DESCRIPTION: </label>
+					<label class="col-md-3 pt-3 text-right" for="name">HEADLINE DESCRIPTION : </label>
 					<textarea class="col-md-9" type="text" class="form-control" name="uname1" ingd="uname1" required=""></textarea>
 				</div>
 				
 				<div class="form-group d-flex col-md-12">
-          <label class="col-md-4 mt-3 text-center" for="name"> UPLOAD HEADLINE IMAGE :</label>
-          <img style="width:40px;height:40px" src="assets/img/Attachment.png" (click)="getFile.click">
+          <label class="col-md-3 mt-3 py-3 text-right" for="name"> UPLOAD NEWS IMAGE :</label>
+          <img class="mt-4 pl-4" style="width:60px;height:40px" src="assets/img/Attachment.png" (click)="getFile.click">
 					<input #getFile hidden class="col-md-4" type="file" class="form-control" name="uname1" required="">
 				</div>
                 <button type="submit" class="btn btn-success btn-lg col-md-6 " id="btnLogin"> Submit </button>
