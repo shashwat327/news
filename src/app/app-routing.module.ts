@@ -6,6 +6,9 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { FormComponent } from './form/form.component';
 import { NewsdashboardComponent } from './newsdashboard/newsdashboard.component';
 import { WorldComponent } from './world/world.component';
+import { SportsComponent } from './sports/sports.component';
+import { MoviesComponent } from './movies/movies.component';
+import { BusinessComponent } from './business/business.component';
 
 
 const routes: Routes = [
@@ -25,6 +28,24 @@ const routes: Routes = [
     path: 'world',
     pathMatch: 'full',
     component: WorldComponent,
+    children: []
+  },
+  {
+    path: 'sports',
+    pathMatch: 'full',
+    component: SportsComponent,
+    children: []
+  },
+  {
+    path: 'movies',
+    pathMatch: 'full',
+    component: MoviesComponent,
+    children: []
+  },
+  {
+    path: 'business',
+    pathMatch: 'full',
+    component: BusinessComponent,
     children: []
   },
   {

@@ -4,12 +4,13 @@ import { NewsService } from '../shared/news.service';
 import { News } from '../shared/news.model';
 
 @Component({
-  selector: 'app-world',
-  templateUrl: './world.component.html',
-  styleUrls: ['./world.component.css']
+  selector: 'app-business',
+  templateUrl: './business.component.html',
+  styleUrls: ['./business.component.css']
 })
-export class WorldComponent implements OnInit {
+export class BusinessComponent implements OnInit {
 
+ 
   list: News[];
   constructor(private router: Router,private service:NewsService) { }
   goHome() {

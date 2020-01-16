@@ -26,6 +26,9 @@ import { NewsdashboardComponent } from './newsdashboard/newsdashboard.component'
 import { environment } from 'src/environments/environment';
 import { WorldComponent } from './world/world.component';
 import { NewsService } from './shared/news.service';
+import { SportsComponent } from './sports/sports.component';
+import { MoviesComponent } from './movies/movies.component';
+import { BusinessComponent } from './business/business.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,9 @@ import { NewsService } from './shared/news.service';
     FormComponent,
     NewsdashboardComponent,
     WorldComponent,
+    SportsComponent,
+    MoviesComponent,
+    BusinessComponent,
   ],
   imports: [
     BrowserModule,

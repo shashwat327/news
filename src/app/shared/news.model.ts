@@ -4,5 +4,6 @@ export class News {
         description: string;
         category:string;
         subcategory:string;
+        paragraph:string;
     
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';  
+import { Router, ActivatedRoute } from '@angular/router';
+import { NewsService } from '../shared/news.service';
+import { News } from '../shared/news.model'; 
 
 @Component({
   selector: 'app-subcontent',
@@ -9,7 +11,11 @@ import { Router } from '@angular/router';
 export class SubcontentComponent implements OnInit {
 
 
-  constructor( private router: Router) { }
+  list: News[];
+  headlineData: any;
+  paragraphData: any;
+  constructor(private router: Router,private service:NewsService,
+    private route: ActivatedRoute) { }
 
   goHome() {
     this.router.navigate(['']); 
@@ -17,7 +23,36 @@ export class SubcontentComponent implements OnInit {
   gotoIndia() {
     this.router.navigate(['india']); 
   }
-  ngOnInit() {
-  }
 
+
+  ngOnInit() {
+    this.service.getnews().subscribe(actionArray => {
+      this.list = actionArray.map(a => {
+        const data = a.payload.doc.data() as News;
+        data.id = a.payload.doc.id;
+        // console.log(data);
+        return data; 
+      });
+      this.headlineData=  this.route.snapshot.paramMap.get('desc')
+
+ this.getparagraph();
+      console.log(JSON.stringify(this.list)); 
+   });
+
+ 
+ }
+
+
+ getparagraph(){
+for(var i=0;i<this.list.length;i++){
+  if(this.list[i].headline==this.headlineData){
+
+   this.paragraphData= this.list[i].paragraph;
+   break;
+  }
+ 
+}
+
+console.log(this.paragraphData);
+}
 }

@@ -19,10 +19,10 @@
           <a class="nav-link" (click)="gotoWorld()">WORLD</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">SPORTS</a>
+          <a class="nav-link" (click)="gotoSports()">SPORTS</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          <a (click)="gotoMovies()" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             MOVIES
           </a>
@@ -34,7 +34,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">BUSINESS</a>
+          <a class="nav-link" (click)="gotoBusiness()">BUSINESS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">ABOUT</a>

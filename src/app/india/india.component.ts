@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NewsService } from '../shared/news.service';
+import { News } from '../shared/news.model';
 
 @Component({
   selector: 'app-india',
@@ -7,8 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./india.component.css']
 })
 export class IndiaComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  list: News[];
+  constructor(private router: Router, private service:NewsService) { }
 
   goHome() {
     this.router.navigate(['']); 
@@ -16,11 +18,21 @@ export class IndiaComponent implements OnInit {
   gotoIndia() {
     this.router.navigate(['india']); 
   }
-  gotoBigNews() {
-    this.router.navigate(['sub']); 
+  gotoBigNews(data) {
+    console.log(data);
+    this.router.navigate(['sub',{desc:data}]); 
   }
   
   ngOnInit() {
+    this.service.getnews().subscribe(actionArray => {
+      this.list = actionArray.map(a => {
+        const data = a.payload.doc.data() as News;
+        data.id = a.payload.doc.id;
+        // console.log(data);
+        return data; 
+      });
+      console.log(JSON.stringify(this.list)); 
+   });
   }
 
 }

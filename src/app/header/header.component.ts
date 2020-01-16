@@ -22,7 +22,15 @@ export class HeaderComponent implements OnInit {
   gotoForm() {
     this.router.navigate(['form']); 
   }
-
+  gotoSports() {
+    this.router.navigate(['sports']); 
+  }
+  gotoMovies() {
+    this.router.navigate(['movies']); 
+  }
+  gotoBusiness() {
+    this.router.navigate(['business']); 
+  }
   ngOnInit() {
     
   }

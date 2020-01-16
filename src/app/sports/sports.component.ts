@@ -4,14 +4,14 @@ import { NewsService } from '../shared/news.service';
 import { News } from '../shared/news.model';
 
 @Component({
-  selector: 'app-world',
-  templateUrl: './world.component.html',
-  styleUrls: ['./world.component.css']
+  selector: 'app-sports',
+  templateUrl: './sports.component.html',
+  styleUrls: ['./sports.component.css']
 })
-export class WorldComponent implements OnInit {
-
+export class SportsComponent implements OnInit {
   list: News[];
-  constructor(private router: Router,private service:NewsService) { }
+  constructor(private router: Router, private service:NewsService) { }
+
   goHome() {
     this.router.navigate(['']); 
   }
@@ -32,6 +32,7 @@ export class WorldComponent implements OnInit {
       });
       console.log(JSON.stringify(this.list)); 
    });
-}
+  }
+
 
 }
