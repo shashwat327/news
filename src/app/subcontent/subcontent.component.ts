@@ -14,6 +14,7 @@ export class SubcontentComponent implements OnInit {
   list: News[];
   headlineData: any;
   paragraphData: any;
+  imageUploadData: string;
   constructor(private router: Router,private service:NewsService,
     private route: ActivatedRoute) { }
 
@@ -48,6 +49,7 @@ for(var i=0;i<this.list.length;i++){
   if(this.list[i].headline==this.headlineData){
 
    this.paragraphData= this.list[i].paragraph;
+   this.imageUploadData= this.list[i].imgUpload;
    break;
   }
  

@@ -5,5 +5,6 @@ export class News {
         category:string;
         subcategory:string;
         paragraph:string;
+        imgUpload:string;
     
 }

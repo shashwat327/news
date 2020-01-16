@@ -83,9 +83,9 @@
 
           <div class="form-group d-flex col-md-12">
             <label class="col-md-3 mt-3 py-3 text-right" for="name"> UPLOAD NEWS IMAGE :</label>
-            <img class="mt-4 pl-4" style="width:60px;height:40px" src="assets/img/Attachment.png"
-              (click)="getFile.click">
-            <input #getFile hidden class="col-md-4" type="file" class="form-control" name="uname1" required="">
+            <!-- <img class="mt-4 pl-4" style="width:60px;height:40px" src="assets/img/Attachment.png"
+              (click)="getFile.click"> -->
+            <input [formControlName]="'imgupload'" name="imgupload" (change)="upload($event)" accept=".png,.jpg"  class="col-md-3" class="col-md-4" type="file" class="form-control" name="uname1" required="">
           </div>
 
           

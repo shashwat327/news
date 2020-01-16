@@ -29,6 +29,7 @@ import { NewsService } from './shared/news.service';
 import { SportsComponent } from './sports/sports.component';
 import { MoviesComponent } from './movies/movies.component';
 import { BusinessComponent } from './business/business.component';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { BusinessComponent } from './business/business.component';
     SportsComponent,
     MoviesComponent,
     BusinessComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,7 @@ import { BusinessComponent } from './business/business.component';
     MatSidenavModule,  FormsModule , MatCheckboxModule, ReactiveFormsModule,
     MatFormFieldModule, MatInputModule, MatRadioModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,  AngularFireStorageModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]
