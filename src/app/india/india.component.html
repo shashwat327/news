@@ -24,7 +24,7 @@
                           </div>
                           
                           <div class="news-img-box col-4 col-sm-4 col-md-4 col-lg-4 nopadding ">
-                            <a (click)="gotoBigNews()"><img class="news-img img-responsive" src="assets/img/kashmir.jpg"></a>
+                            <a (click)="gotoBigNews(data.headline)"><img class="news-img img-responsive" src="assets/img/kashmir.jpg"></a>
                          </div>
                     </div>
                     
@@ -62,7 +62,7 @@
                           </div>
                           
                           <div class="news-img-box col-4 col-sm-4 col-md-4 col-lg-4 nopadding ">
-                            <a (click)="gotoBigNews()"><img class="news-img img-responsive" src={{data.imgUpload}}></a>
+                            <a (click)="gotoBigNews(data.headline)"><img class="news-img img-responsive" src={{data.imgUpload}}></a>
                          </div>
                     </div>
                     
