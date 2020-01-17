@@ -9,37 +9,37 @@
             <div class="news-left">
                 <div class="nav-links d-flex mb-3 nopadding ">
                     <a style="padding-left:0" class="mr-3" (click)="goHome()">Home</a>
-                    <a style="border-right:none;pointer-events:none;color:#2f07be;" (click)="gotoIndia()">World</a>
+                    <a style="border-right:none;pointer-events:none;color:#2f07be;" (click)="gotoIndia()">Sports</a>
                   </div>
                 <h1 class="title">Sports</h1>
-                <h6 class="sub-title" >All Sports News Are Here</h6>
+                <h6 class="sub-title" >Latest News From Sports</h6>
                 <h5 class=" px-3 py-1 mt-3 text-center text-white">Top News</h5>
                 <!-- Start Of Left Headline Section -->
-                <div class="news-box  col-12 col-sm-12 col-md-12 col-lg-12  d-block mt-3 nopadding" *ngFor="let data of list">
+                <div class="news-box  col-12 col-sm-12 col-md-12 col-lg-12  d-block mt-1 nopadding" *ngFor="let data of list">
    
-                    <div  class="d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
+                    <div  class=" headline-n-img-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
                           <div class=" headline-box nopadding col-8 col-sm-8 col-md-8 col-lg-8  d-block ">
-                             <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews()">{{data.headline}}</a></h4>
-                             <p class="headline-para mt-2 nopadding ">{{data.description}}</p>
+                             <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews(data.headline)">{{data.headline}}</a></h4>
+                             <p class="headline-para mt-2 mb-0 nopadding ">{{data.description}}</p>
                           </div>
                           
-                          <div class="news-img-box col-4 col-sm-4 col-md-4 col-lg-4 nopadding ">
-                            <a (click)="gotoBigNews()"><img class="news-img img-responsive" src="assets/img/kashmir.jpg"></a>
+                          <div  class="news-img-box col-4 col-sm-4 col-md-4 col-lg-4 nopadding ">
+                            <a (click)="gotoBigNews(data.headline)"><img class="news-img img-responsive" src={{data.imgUpload}}></a>
                          </div>
                     </div>
                     
 
-                    <div  class=" date-n-social-icons-box mt-2 d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
-                        <h6 class="date mt-1 col-6 col-sm-6 col-md-6 col-lg-6"><i class="fa fa-clock-o clock-icon"></i> January 07, 2020 4:03 PM</h6>
-                        <div  class="social-icons-box d-flex  mt-1 col-6 col-sm-6 col-md-6 col-lg-6  nopadding">
+                    <div   class=" date-n-social-icons-box mt-1 d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
+                        <h6 class="date  col-6 col-sm-6 col-md-6 col-lg-6"><i class="fa fa-clock-o clock-icon"></i> {{ data.dateTime.toMillis() | date:'MMMM d, y'}}</h6>
+                        <div  class="social-icons-box d-flex  col-6 col-sm-6 col-md-6 col-lg-6  nopadding">
                           <a> <img class="social-icons-img img-responsive" src="assets/img/whatsapp.png"></a>
                           <a> <img class="social-icons-img img-responsive" src="assets/img/facebook.png"></a>
                           <a> <img class="social-icons-img img-responsive" src="assets/img/twitter.png"></a>
                           <a> <img class="social-icons-img img-responsive" src="assets/img/instagram.jpg"></a>
                           <a> <img class="social-icons-img img-responsive" src="assets/img/youtube.png"></a>
-                        </div>   
+                        </div>      
                     </div>
-                <hr />    
+                <hr/>    
                 </div>
                 <!-- End Of Left Headline Section -->
             </div> 
@@ -53,22 +53,22 @@
             <div class="news-right ">
                 <h1 class="pl-4  text-white">Whats Going On</h1>
                 <!-- Start of Right Headline Section -->
-                <div class="news-box  col-12 col-sm-12 col-md-12 col-lg-12  d-block mt-3 nopadding" *ngFor="let data of list">
+                <div  class="news-box  col-12 col-sm-12 col-md-12 col-lg-12  d-block mt-1 nopadding" *ngFor="let data of list">
    
-                    <div  class="d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
+                    <div  class="headline-n-img-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
                           <div  class=" headline-box nopadding col-8 col-sm-8 col-md-8 col-lg-8  d-block ">
-                             <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews()">{{data.headline}}</a></h4>
+                             <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews(data.headline)">{{data.headline}}</a></h4>
                              <p class="headline-para mt-2 mb-0 nopadding ">{{data.description}}</p>
                           </div>
                           
                           <div class="news-img-box col-4 col-sm-4 col-md-4 col-lg-4 nopadding ">
-                            <a (click)="gotoBigNews()"><img class="news-img img-responsive" src="assets/img/kashmir.jpg"></a>
+                            <a (click)="gotoBigNews(data.headline)"><img class="news-img img-responsive" src={{data.imgUpload}}></a>
                          </div>
                     </div>
                     
 
-                    <div   class=" date-n-social-icons-box mt-1 d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
-                        <h6 class="date  col-6 col-sm-6 col-md-6 col-lg-6"><i class="fa fa-clock-o clock-icon"></i> January 07, 2020 4:03 PM</h6>
+                    <div    class=" date-n-social-icons-box mt-1 d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
+                        <h6 class="date  col-6 col-sm-6 col-md-6 col-lg-6"><i class="fa fa-clock-o clock-icon"></i> {{ data.dateTime.toMillis() | date:'MMMM d, y'}}</h6>
                         <div  class="social-icons-box d-flex  col-6 col-sm-6 col-md-6 col-lg-6  nopadding">
                           <a> <img class="social-icons-img img-responsive" src="assets/img/whatsapp.png"></a>
                           <a> <img class="social-icons-img img-responsive" src="assets/img/facebook.png"></a>
@@ -89,4 +89,3 @@
 </div>
 <!-- End Of Container -->
 <app-footer></app-footer>
-

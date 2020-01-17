@@ -8,9 +8,28 @@ export class NewsService {
 
   constructor(private firestore: AngularFirestore) { }
  
-  getnews() {
-    return this.firestore.collection('news').snapshotChanges();
+  getIndia()
+  
+  {
+    return this.firestore.collection('india').snapshotChanges();
   }
+
+  getWorld() {
+    return this.firestore.collection('world').snapshotChanges();
+  }
+
+  getSports() {
+    return this.firestore.collection('sports').snapshotChanges();
+  }
+
+  getMovies() {
+    return this.firestore.collection('movies').snapshotChanges();
+  }
+
+  getBusiness() {
+    return this.firestore.collection('business').snapshotChanges();
+  }
+
 }
 
 

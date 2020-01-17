@@ -5,6 +5,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 // import { AngularFireStorage } from 'angularfire/storage';
 import { AngularFireStorage, AngularFireStorageReference } from 'angularfire2/storage';
 import * as firebase from 'firebase';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Component({
   selector: 'app-newsdashboard',
@@ -15,18 +16,21 @@ export class NewsdashboardComponent implements OnInit {
   storageRef: AngularFireStorageReference;
   newsform:FormGroup;
 
-  ref: any;
-  task: any;
-  uploadProgress: any;
-  downloadURL: any;
+  // ref: any;
+  // task: any;
+  // uploadProgress: any;
+  // downloadURL: any;
   imageUploadUrl: any;
+  shashwat:any;
+  selected:any;
 
   constructor(
                private router: Router, 
                private elementRef: ElementRef,
                private formBuilder:FormBuilder, 
                private firestore: AngularFirestore,
-               private afStorage: AngularFireStorage
+               private afStorage: AngularFireStorage,
+               private ngxService: NgxUiLoaderService
              ) { }
 
  
@@ -42,32 +46,87 @@ subcategory: new FormControl("",Validators.required),
 headline: new FormControl("",Validators.required),
 description: new FormControl("",Validators.required),
 paragraph: new FormControl("",Validators.required),
+dateTime: new FormControl("",Validators.required),
 })
-  }
-//   maxLength(el) {    
-//     if (!('maxLength' in el)) {
-//         var max = el.attributes.maxLength.value;
-//         el.onkeypress = function () {
-//             if (this.value.length >= max) return false;
-//         };
-//     }
-// }
 
-// this.maxLength(document.getElementById("textDesc"));
+}
 
-
-goHome() {this.router.navigate(['']);}
+goHome() {
+  this.router.navigate(['']);
+}
 
   submitform(value){
-    console.log(value);
+    // console.log(value);
+    console.log(value.dateTime);
 
-    value.imgUpload = this.imageUploadUrl;
+    if(value.category==="India"){
+      this.ngxService.start();
+
+      if(this.imageUploadUrl){
+        value.imgUpload = this.imageUploadUrl;
+      }else{
+        value.imgUpload = "";
+      }
     
-    this.firestore.collection('news').add(value);
-    }
+     this.firestore.collection('india').add(value);
+      this.ngxService.stop();
+  
+ }else if (value.category==="World"){
+      this.ngxService.start();
+
+     if(this.imageUploadUrl){
+      value.imgUpload = this.imageUploadUrl;
+     }else{
+    value.imgUpload = "";
+     }
+
+    this.firestore.collection('world').add(value);
+    this.ngxService.stop();
+  }else if (value.category==="Sports"){
+    this.ngxService.start();
+
+   if(this.imageUploadUrl){
+    value.imgUpload = this.imageUploadUrl;
+   }else{
+  value.imgUpload = "";
+   }
+
+  this.firestore.collection('sports').add(value);
+  this.ngxService.stop();
+  }else if (value.category==="Movies"){
+    this.ngxService.start();
+
+   if(this.imageUploadUrl){
+    value.imgUpload = this.imageUploadUrl;
+   }else{
+  value.imgUpload = "";
+   }
+
+  this.firestore.collection('movies').add(value);
+  this.ngxService.stop();
+  }else if (value.category==="Business"){
+          
+                      this.ngxService.start();
+
+                     if(this.imageUploadUrl){
+                     value.imgUpload = this.imageUploadUrl;}
+                     else{
+                            value.imgUpload = "" }
+                      this.firestore.collection('business').add(value);
+                      this.ngxService.stop();
+                  
+  }
+  }
+  
+  onSelect(Element){
+    console.log(Element);
+    // console.log(this.shashwat)
+} 
+
 
 
     upload(event) {
+      this.ngxService.start();
       // const randomId = Math.random().toString(36).substring(2);
       // this.ref = this.afStorage.ref(randomId);
       // this.task = this.ref.put(event.target.files[0]).downloadURL();
@@ -84,12 +143,11 @@ goHome() {this.router.navigate(['']);}
         rst.ref.getDownloadURL().then(url => {
           console.log(url);
 
-    this.imageUploadUrl= url;
+          this.imageUploadUrl= url;
+          this.ngxService.stop();
           
         })
       })
-
-      
     }
 
     // uploadImage(base64data) {

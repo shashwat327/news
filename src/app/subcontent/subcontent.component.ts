@@ -15,6 +15,7 @@ export class SubcontentComponent implements OnInit {
   headlineData: any;
   paragraphData: any;
   imageUploadData: string;
+  dataTimeData: Date;
   constructor(private router: Router,private service:NewsService,
     private route: ActivatedRoute) { }
 
@@ -27,19 +28,71 @@ export class SubcontentComponent implements OnInit {
 
 
   ngOnInit() {
-    this.service.getnews().subscribe(actionArray => {
+
+    this.service.getIndia().subscribe(actionArray => {
       this.list = actionArray.map(a => {
         const data = a.payload.doc.data() as News;
         data.id = a.payload.doc.id;
         // console.log(data);
         return data; 
       });
-      this.headlineData=  this.route.snapshot.paramMap.get('desc')
+      this.headlineData=  this.route.snapshot.paramMap.get('india')
 
- this.getparagraph();
-      console.log(JSON.stringify(this.list)); 
+      this.getparagraph();
+      // console.log(JSON.stringify(this.list)); 
    });
 
+   this.service.getWorld().subscribe(actionArray => {
+    this.list = actionArray.map(a => {
+      const data = a.payload.doc.data() as News;
+      data.id = a.payload.doc.id;
+      // console.log(data);
+      return data; 
+    });
+    this.headlineData=  this.route.snapshot.paramMap.get('world')
+
+    this.getparagraph();
+    // console.log(JSON.stringify(this.list)); 
+ });
+
+ this.service.getSports().subscribe(actionArray => {
+  this.list = actionArray.map(a => {
+    const data = a.payload.doc.data() as News;
+    data.id = a.payload.doc.id;
+    // console.log(data);
+    return data; 
+  });
+  this.headlineData=  this.route.snapshot.paramMap.get('sports')
+
+  this.getparagraph();
+  // console.log(JSON.stringify(this.list)); 
+});
+
+this.service.getMovies().subscribe(actionArray => {
+  this.list = actionArray.map(a => {
+    const data = a.payload.doc.data() as News;
+    data.id = a.payload.doc.id;
+    // console.log(data);
+    return data; 
+  });
+  this.headlineData=  this.route.snapshot.paramMap.get('movies')
+
+  this.getparagraph();
+  // console.log(JSON.stringify(this.list)); 
+});
+
+this.service.getBusiness().subscribe(actionArray => {
+  this.list = actionArray.map(a => {
+    const data = a.payload.doc.data() as News;
+    data.id = a.payload.doc.id;
+    // console.log(data);
+    return data; 
+  });
+  this.headlineData=  this.route.snapshot.paramMap.get('sports')
+
+    this.getparagraph();
+  //  console.log(JSON.stringify(this.list)); 
+});
  
  }
 
@@ -50,11 +103,11 @@ for(var i=0;i<this.list.length;i++){
 
    this.paragraphData= this.list[i].paragraph;
    this.imageUploadData= this.list[i].imgUpload;
+   this.dataTimeData=this.list[i].dateTime
    break;
   }
  
 }
-
-console.log(this.paragraphData);
+// console.log(this.paragraphData);
 }
 }

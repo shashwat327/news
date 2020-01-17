@@ -20,19 +20,22 @@ export class IndiaComponent implements OnInit {
   }
   gotoBigNews(data) {
     console.log(data);
-    this.router.navigate(['sub',{desc:data}]); 
+    this.router.navigate(['sub',{india:data}]); 
   }
   
   ngOnInit() {
-    this.service.getnews().subscribe(actionArray => {
+    this.service.getIndia().subscribe(actionArray => {
       this.list = actionArray.map(a => {
         const data = a.payload.doc.data() as News;
         data.id = a.payload.doc.id;
         // console.log(data);
         return data; 
       });
-      console.log(JSON.stringify(this.list)); 
+      // console.log(JSON.stringify(this.list)); 
    });
+
+   
+
   }
 
 }

@@ -42,14 +42,14 @@ hr{
     font-size: 16px;
 }
 .news-right{
-    margin-top: 38px;
+    margin-top: 132px;
     margin-left: 20px;
 }
 .news-right h1
 {
     background-color:#2f07be;
     font-family: Arial;
-    font-size: 32px;
+    font-size: 25px;
 }
 .news-img{
     padding: none;
@@ -120,6 +120,7 @@ img:hover  {
     }
     .news-right{
         margin-left:0;
+        margin-top: 10px;
     }
     .news-left{
         margin-right: 0;
@@ -128,7 +129,7 @@ img:hover  {
         margin-left: 4px;
     }
     .headline{
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 
@@ -148,12 +149,16 @@ img:hover  {
        } 
        .news-right{
         margin-left:0;
+        margin-top: 10px;
     }
     .news-left{
         margin-right: 0;
     }
     .social-icons-img{
         margin-left: 4px;
+    }
+    .headline-n-img-box{
+        height:180px;
     }
 } 
 @media only screen and (min-width: 768px) {
@@ -174,8 +179,14 @@ img:hover  {
      .news-left{
          margin-right: 0;
      }
+     .news-right{
+        margin-top: 10px;
+     }
      .social-icons-img{
         margin-left: 4px;
+    }
+    .headline-n-img-box{
+        height:150px;
     }
 }
 
@@ -195,13 +206,17 @@ img:hover  {
        }
         .news-right{
             margin-left:20px;
+            margin-top: 132px;
         }
         .news-left{
             margin-right: 20px;
         }
        .social-icons-img{
         margin-left: 4px;
-    }
+        }
+        .headline-n-img-box{
+            height:220px;
+        }
 } 
 
 @media only screen and (min-width: 1200px) { 
@@ -210,8 +225,12 @@ img:hover  {
         }
         .news-right{
             margin-left:20px;
+            margin-top: 132px;
         }
         .news-left{
             margin-right: 20px;
+        }
+        .headline-n-img-box{
+            height:180px;
         }
 }

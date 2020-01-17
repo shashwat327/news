@@ -8,12 +8,16 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { MatFormFieldModule } from '@angular/material';
+import { MatFormFieldModule, MatNativeDateModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import {MatRadioModule} from '@angular/material/radio';
 import { AppRoutingModule } from './app-routing.module';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { NgxUiLoaderModule } from  'ngx-ui-loader';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+ 
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -54,7 +58,9 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
     MatSidenavModule,  FormsModule , MatCheckboxModule, ReactiveFormsModule,
     MatFormFieldModule, MatInputModule, MatRadioModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule,  AngularFireStorageModule
+    AngularFirestoreModule,  AngularFireStorageModule,
+    OwlDateTimeModule, OwlNativeDateTimeModule,  NgxUiLoaderModule,
+    MatDatepickerModule, MatNativeDateModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

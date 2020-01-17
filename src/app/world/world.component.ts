@@ -18,12 +18,12 @@ export class WorldComponent implements OnInit {
   gotoIndia() {
     this.router.navigate(['india']); 
   }
-  gotoBigNews() {
-    this.router.navigate(['sub']); 
+  gotoBigNews(data) {
+    this.router.navigate(['sub',{world:data}]);
   }
   
   ngOnInit() {
-    this.service.getnews().subscribe(actionArray => {
+    this.service.getWorld().subscribe(actionArray => {
       this.list = actionArray.map(a => {
         const data = a.payload.doc.data() as News;
         data.id = a.payload.doc.id;
