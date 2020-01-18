@@ -13,7 +13,7 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
   styleUrls: ['./newsdashboard.component.css']
 })
 export class NewsdashboardComponent implements OnInit {
-  storageRef: AngularFireStorageReference;
+  // storageRef: AngularFireStorageReference;
   newsform:FormGroup;
 
   // ref: any;
@@ -57,7 +57,7 @@ goHome() {
 
   submitform(value){
     // console.log(value);
-    console.log(value.dateTime);
+    // console.log(value.dateTime);
 
     if(value.category==="India"){
       this.ngxService.start();
@@ -118,10 +118,10 @@ goHome() {
   }
   }
   
-  onSelect(Element){
-    console.log(Element);
-    // console.log(this.shashwat)
-} 
+        onSelect(Element){
+                             console.log(Element);
+                             // console.log(this.shashwat)
+                         } 
 
 
 

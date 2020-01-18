@@ -20,8 +20,7 @@ export class BusinessComponent implements OnInit {
     this.router.navigate(['india']); 
   }
   gotoBigNews(data) {
-    this.router.navigate(['sub',{business
-      :data}]); 
+    this.router.navigate(['sub',{business:data}]); 
   }
   
   ngOnInit() {

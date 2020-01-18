@@ -17,6 +17,7 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { NgxUiLoaderModule } from  'ngx-ui-loader';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
  
 
 import { AppComponent } from './app.component';
@@ -34,6 +35,7 @@ import { SportsComponent } from './sports/sports.component';
 import { MoviesComponent } from './movies/movies.component';
 import { BusinessComponent } from './business/business.component';
 import { AngularFireStorageModule } from 'angularfire2/storage';
+import { BrakingnewzComponent } from './brakingnewz/brakingnewz.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
     SportsComponent,
     MoviesComponent,
     BusinessComponent,
+    BrakingnewzComponent,
 
   ],
   imports: [
@@ -60,7 +63,7 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,  AngularFireStorageModule,
     OwlDateTimeModule, OwlNativeDateTimeModule,  NgxUiLoaderModule,
-    MatDatepickerModule, MatNativeDateModule
+    MatDatepickerModule, MatNativeDateModule, NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

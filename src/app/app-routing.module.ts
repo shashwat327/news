@@ -9,6 +9,7 @@ import { WorldComponent } from './world/world.component';
 import { SportsComponent } from './sports/sports.component';
 import { MoviesComponent } from './movies/movies.component';
 import { BusinessComponent } from './business/business.component';
+import { BrakingnewzComponent } from './brakingnewz/brakingnewz.component';
 
 
 const routes: Routes = [
@@ -52,6 +53,12 @@ const routes: Routes = [
     path: 'sub',
     pathMatch: 'full',
     component: SubcontentComponent,
+    children: []
+  },
+  {
+    path: 'break',
+    pathMatch: 'full',
+    component:BrakingnewzComponent,
     children: []
   },
   {

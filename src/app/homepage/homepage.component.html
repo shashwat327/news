@@ -16,11 +16,11 @@
             <div class="breaking-box pt-2 pb-1">
                 <!--marque-->
                 <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseleave="this.start();">
-                  <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">Technology</span> Google Employees Protest Secret Work on Censored Search Engine for China</a>
-                  <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">Automotive</span> Investors Betting Against Tesla Made $1 Billion on Friday</a>
-                  <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/.html"><span class="position-relative mx-2 badge badge-primary rounded-0">Football</span> World cup 2050 will release in Dubay</a>
-                  <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">Beauty</span> Lemon make your skin fresh and glowing</a>
-                  <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">Sport</span> 5 Takeaways From Elon Musk’s Interview With The Times About Tesla</a>
+                  <!-- <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">India</span> Google Employees Protest Secret Work on Censored Search Engine for China</a>
+                  <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">World</span> Investors Betting Against Tesla Made $1 Billion on Friday</a>
+                  <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/.html"><span class="position-relative mx-2 badge badge-primary rounded-0">Sports</span> World cup 2050 will release in Dubay</a>
+                  <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">Movies</span> Lemon make your skin fresh and glowing</a> -->
+                  <span *ngFor="let data of listArray" (click)=gotoBigNews(data.headline) class="position-relative mx-2  rounded-0"> {{data.headline}}</span> 
                 </marquee>
             </div>
         </div>

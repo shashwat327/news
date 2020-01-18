@@ -19,7 +19,7 @@ export class IndiaComponent implements OnInit {
     this.router.navigate(['india']); 
   }
   gotoBigNews(data) {
-    console.log(data);
+    // console.log(data);
     this.router.navigate(['sub',{india:data}]); 
   }
   
@@ -33,9 +33,6 @@ export class IndiaComponent implements OnInit {
       });
       // console.log(JSON.stringify(this.list)); 
    });
-
-   
-
   }
 
 }
