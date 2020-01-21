@@ -19,6 +19,9 @@ export class SubcontentComponent implements OnInit {
   NwzCatgry: any;
   headlineDataI: string;
   headlineDataW: string;
+  headlineDataS: any;
+  headlineDataM: any;
+  headlineDataB: any;
   constructor(     private router: Router,
                    private service:NewsService,
                    private route: ActivatedRoute) { }
@@ -34,6 +37,9 @@ export class SubcontentComponent implements OnInit {
   ngOnInit() {
     this.headlineDataI=  this.route.snapshot.paramMap.get('india');
     this.headlineDataW=  this.route.snapshot.paramMap.get('world');
+    this.headlineDataS=  this.route.snapshot.paramMap.get('sports');
+    this.headlineDataM=  this.route.snapshot.paramMap.get('movies');
+    this.headlineDataB=  this.route.snapshot.paramMap.get('business');
 
     if(this.headlineDataI)
     {
@@ -63,47 +69,49 @@ console.log(this.headlineData+"inside india");
     this.getNewsData();
     // console.log(JSON.stringify(this.list)); 
  });
+}else if( this.headlineDataS)
+{
+ this.service.getSports().subscribe(actionArray => {
+  this.list = actionArray.map(a => {
+    const data = a.payload.doc.data() as News;
+    data.id = a.payload.doc.id;
+    // console.log(data);
+    return data; 
+  });
+  this.headlineData=  this.route.snapshot.paramMap.get('sports')
+
+  this.getNewsData();
+  // console.log(JSON.stringify(this.list)); 
+});
+}else if( this.headlineDataM)
+{
+this.service.getMovies().subscribe(actionArray => {
+  this.list = actionArray.map(a => {
+    const data = a.payload.doc.data() as News;
+    data.id = a.payload.doc.id;
+    // console.log(data);
+    return data; 
+  });
+  this.headlineData=  this.route.snapshot.paramMap.get('movies')
+
+  this.getNewsData();
+  // console.log(JSON.stringify(this.list)); 
+});
+}else if( this.headlineDataB)
+{
+this.service.getBusiness().subscribe(actionArray => {
+  this.list = actionArray.map(a => {
+    const data = a.payload.doc.data() as News;
+    data.id = a.payload.doc.id;
+    // console.log(data);
+    return data; 
+  });
+  this.headlineData=  this.route.snapshot.paramMap.get('business')
+
+    this.getNewsData();
+  //  console.log(JSON.stringify(this.list)); 
+});
 }
-
-//  this.service.getSports().subscribe(actionArray => {
-//   this.list = actionArray.map(a => {
-//     const data = a.payload.doc.data() as News;
-//     data.id = a.payload.doc.id;
-//     // console.log(data);
-//     return data; 
-//   });
-//   this.headlineData=  this.route.snapshot.paramMap.get('sports')
-
-//   this.getNewsData();
-//   // console.log(JSON.stringify(this.list)); 
-// });
-
-// this.service.getMovies().subscribe(actionArray => {
-//   this.list = actionArray.map(a => {
-//     const data = a.payload.doc.data() as News;
-//     data.id = a.payload.doc.id;
-//     // console.log(data);
-//     return data; 
-//   });
-//   this.headlineData=  this.route.snapshot.paramMap.get('movies')
-
-//   this.getNewsData();
-//   // console.log(JSON.stringify(this.list)); 
-// });
-
-// this.service.getBusiness().subscribe(actionArray => {
-//   this.list = actionArray.map(a => {
-//     const data = a.payload.doc.data() as News;
-//     data.id = a.payload.doc.id;
-//     // console.log(data);
-//     return data; 
-//   });
-//   this.headlineData=  this.route.snapshot.paramMap.get('sports')
-
-//     this.getNewsData();
-//   //  console.log(JSON.stringify(this.list)); 
-// });
- 
 }
 
 

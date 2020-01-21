@@ -1,5 +1,5 @@
 export class Breakingnews {
 
     id:string;
-    headlinebrak: {};
+    headlinebrak: any;
 }

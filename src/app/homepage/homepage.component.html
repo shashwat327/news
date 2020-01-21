@@ -1,267 +1,130 @@
 <app-header></app-header>
 
 <div class="container-fluid">
-    <div class="row box p-3">
-            <!--start code-->
-    <div class="row  py-2" style="width: 100%; margin: 0 auto;">
-        <!--Breaking box-->
-        
-            <div class="d-inline-block d-md-block col-1 col-md-3 col-lg-2 bg-primary text-white text-center py-2 px-2">
-                <i class="fa fa-bolt px-1"  aria-hidden="true" style="font-size: 20px;width:20px"></i>
+    <!-- start of page(box) -->
+    <div class=" box d-block ">
+        <!--Start Of Breaking News Section-->
+        <div class="row col-sm-12 col-md-12 col-lg-12 nopadding  " style="width: 100%; margin: 0 auto;">
+
+            <!--Start of Breaking News Title-->
+            <div class="d-inline-block  d-md-block col-1 col-sm-2 col-md-3 col-lg-2 bg-primary text-white text-center py-2 px-2">
+                <i class="fa fa-bolt px-1" aria-hidden="true" style="font-size: 20px;width:20px"></i>
                 <span class="d-none d-md-inline-block pl-1">Breaking News</span>
             </div>
-        
-        <!--Breaking content-->
-        <div class="col-11 col-md-9 col-sm-10 col-lg-10 pl-1  text-white" style="background-color: #474645;">
-            <div class="breaking-box pt-2 pb-1">
-                <!--marque-->
-                <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseleave="this.start();">
-                  <!-- <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">India</span> Google Employees Protest Secret Work on Censored Search Engine for China</a>
+            <!--End of Breaking News Title-->
+
+            <!-- Start Of Breaking content-->
+            <div class="col-11  col-sm-10 col-md-9 col-lg-10   text-white" style="background-color: #474645;">
+                <div class="breaking-box pt-2 pb-1">
+                    <!--marque-->
+                    <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseleave="this.start();">
+                        <!-- <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">India</span> Google Employees Protest Secret Work on Censored Search Engine for China</a>
                   <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">World</span> Investors Betting Against Tesla Made $1 Billion on Friday</a>
                   <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/.html"><span class="position-relative mx-2 badge badge-primary rounded-0">Sports</span> World cup 2050 will release in Dubay</a>
                   <a class="h6 font-weight-light" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/"><span class="position-relative mx-2 badge badge-primary rounded-0">Movies</span> Lemon make your skin fresh and glowing</a> -->
-                  <span *ngFor="let data of listArray" (click)=gotoBigNews(data.headline) class="position-relative mx-2  rounded-0"> {{data.headline}}</span> 
-                </marquee>
+                        <span *ngFor="let data of listArray" (click)=gotoBigNews(data.headline)
+                            class="position-relative mx-4  rounded-0"> <span></span>{{data.headline}}</span>
+                    </marquee>
+                </div>
             </div>
+            <!-- End Of Breaking Content-->
         </div>
-    </div>
-	<!--end code-->
-        <!-- Start Of Left News Section -->
-        <div class=" col-xs-12  col-sm-12 col-md-12 col-lg-6  box1 nopadding">
-            <h1 class="title">Aaj Tak<b style="color: blue;font-size: 17px;">&nbsp;&nbsp; ....Sabse Tej</b></h1>
-            <!-- start of left sub section -->
-            <div class="news-left">
-                <h5 class=" px-3 py-1 text-center text-white">Top News</h5>
-                <!-- Start Of Left First News -->
-                <div class="news-box news1 col-12 col-sm-12 col-md-12 d-flex mt-3 nopadding">
-                    <div class=" headline-box nopadding col-8 col-sm-8 col-md-8 d-block routinglinks">
-                        <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews()">Finding Nirmala: Cong mocks govt
-                                as finance minister absent from key pre-budget meet</a></h4>
-                        <p class="headline-para mt-3 ">Delhi election: What is at stake for Kejriwal, Modi and Rahul
-                            Gandhi?</p>
-                    </div>
-                    <div class="news-img-box col-4 col-sm-4 col-md-4  nopadding ">
-                        <a (click)="gotoBigNews()"><img class="news-img img-responsive" src="assets/img/girl.jpg"></a>
-                    </div>
-                </div>
-                <div class=" date-n-social-icons-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
-                    <h6 class="date mt-3 col-6 col-sm-6 col-md-6 col-lg-6">
-                      <i class="fa fa-clock-o" style="font-size:14px;color:red"></i> January 07, 2020 4:03 PM
-                    </h6>
-                    <div class="social-icons-box mt-3 col-6 col-sm-6 col-md-6 col-lg-6 d-inline nopadding">
-                       <a > <img class="social-icons-img img-responsive" src="assets/img/youtube.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/instagram.jpg"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/twitter.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/facebook.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/whatsapp.png"></a>
-                    </div>
-                </div>
-                <hr />
-                <!-- End Of Left First News -->
+        <!--End Of Breaking News Section-->
 
-                 <!-- Start of Left second News -->
-                 <div class="news-box col-12 col-sm-12  d-flex mt-3 nopadding">
-                    <div class=" headline-box nopadding col-8 col-sm-8 d-block routinglinks">
-                        <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews()">Finding Nirmala: Cong mocks govt
-                                as finance minister absent from key pre-budget meet</a></h4>
-                        <p class="headline-para mt-3 ">Delhi election: What is at stake for Kejriwal, Modi and Rahul
-                            Gandhi?</p>
-                    </div>
-                    <div class="news-img-box col-4 col-sm-4   nopadding ">
-                        <a (click)="gotoBigNews()"><img class="news-img img-responsive" src="assets/img/girl.jpg"></a>
-                    </div>
-                </div>
-                <div class=" date-n-social-icons-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
-                    <h6 class="date mt-3 col-6 col-sm-6 col-md-6 col-lg-6">
-                      <i class="fa fa-clock-o" style="font-size:14px;color:red"></i> January 07, 2020 4:03 PM
-                    </h6>
-                    <div class="social-icons-box mt-3 col-6 col-sm-6 col-md-6 col-lg-6 d-inline nopadding">
-                       <a > <img class="social-icons-img img-responsive" src="assets/img/youtube.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/instagram.jpg"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/twitter.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/facebook.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/whatsapp.png"></a>
-                    </div>
-                </div>
-                <hr />
-                <!-- End Of Left Second News -->
-                
-                 <!-- Start of Left third News -->
-                 <div class="news-box col-12 col-sm-12  d-flex mt-3 nopadding">
-                    <div class=" headline-box nopadding col-8 col-sm-8 d-block routinglinks">
-                        <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews()">Finding Nirmala: Cong mocks govt
-                                as finance minister absent from key pre-budget meet</a></h4>
-                        <p class="headline-para mt-3 ">Delhi election: What is at stake for Kejriwal, Modi and Rahul
-                            Gandhi?</p>
-                    </div>
-                    <div class="news-img-box col-4 col-sm-4   nopadding ">
-                        <a (click)="gotoBigNews()"><img class="news-img img-responsive" src="assets/img/girl.jpg"></a>
-                    </div>
-                </div>
-                <div class=" date-n-social-icons-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
-                    <h6 class="date mt-3 col-6 col-sm-6 col-md-6 col-lg-6">
-                      <i class="fa fa-clock-o" style="font-size:14px;color:red"></i> January 07, 2020 4:03 PM
-                    </h6>
-                    <div class="social-icons-box mt-3 col-6 col-sm-6 col-md-6 col-lg-6 d-inline nopadding">
-                       <a > <img class="social-icons-img img-responsive" src="assets/img/youtube.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/instagram.jpg"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/twitter.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/facebook.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/whatsapp.png"></a>
-                    </div>
-                </div>
-                <hr />
-                <!-- End Of Left third News --> 
 
-                <!-- Start of Left Fourth News -->
-                <div class="news-box col-12 col-sm-12  d-flex mt-3 nopadding">
-                    <div class=" headline-box nopadding col-8 col-sm-8 d-block routinglinks">
-                        <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews()">Finding Nirmala: Cong mocks govt
-                                as finance minister absent from key pre-budget meet</a></h4>
-                        <p class="headline-para mt-3 ">Delhi election: What is at stake for Kejriwal, Modi and Rahul
-                            Gandhi?</p>
-                    </div>
-                    <div class="news-img-box col-4 col-sm-4   nopadding ">
-                        <a (click)="gotoBigNews()"><img class="news-img img-responsive" src="assets/img/girl.jpg"></a>
-                    </div>
-                </div>
-                <div class=" date-n-social-icons-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
-                    <h6 class="date mt-3 col-6 col-sm-6 col-md-6 col-lg-6">
-                      <i class="fa fa-clock-o" style="font-size:14px;color:red"></i> January 07, 2020 4:03 PM
-                    </h6>
-                    <div class="social-icons-box mt-3 col-6 col-sm-6 col-md-6 col-lg-6 d-inline nopadding">
-                       <a > <img class="social-icons-img img-responsive" src="assets/img/youtube.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/instagram.jpg"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/twitter.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/facebook.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/whatsapp.png"></a>
-                    </div>
-                </div>
-                <hr />
-                <!-- End Of Left Fourth News -->     
-            </div> 
-            <!-- start of left sub section -->
-        </div>
-        <!-- End Of Left News Section -->
+        <!-- start of home news section -->
+        <div class="inner-box1 mt-4 d-flex nopadding">
 
-        <!-- Start Of Right News Section -->
-        <div class="col-xs-12  col-sm-12 col-md-12 col-lg-6  box2 nopadding">
-            <!-- Start of Right Sub Section -->
-            <div class="news-right ">
-                <h1>News</h1>
-                <h5 class="px-2 py-1 mt-2 text-center text-white">What's Going On</h5>
-                <!-- Start of Right News 1 -->
-                <div class="news-box news1 col-12 col-sm-12  d-flex mt-3 nopadding">
-                    <div class=" headline-box nopadding col-8 col-sm-8 d-block routinglinks">
-                        <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews()">Finding Nirmala: Cong mocks govt
-                                as finance minister absent from key pre-budget meet</a></h4>
-                        <p class="headline-para mt-3 ">Delhi election: What is at stake for Kejriwal, Modi and Rahul
-                            Gandhi?</p>
-                    </div>
-                    <div class="news-img-box col-4 col-sm-4   nopadding ">
-                        <a (click)="gotoBigNews()"><img class="news-img img-responsive" src="assets/img/girl.jpg"></a>
-                    </div>
-                </div>
-                <div class=" date-n-social-icons-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
-                    <h6 class="date mt-3 col-6 col-sm-6 col-md-6 col-lg-6">
-                      <i class="fa fa-clock-o" style="font-size:14px;color:red"></i> January 07, 2020 4:03 PM
-                    </h6>
-                    <div class="social-icons-box mt-3 col-6 col-sm-6 col-md-6 col-lg-6 d-inline nopadding">
-                       <a > <img class="social-icons-img img-responsive" src="assets/img/youtube.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/instagram.jpg"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/twitter.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/facebook.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/whatsapp.png"></a>
-                    </div>
-                </div>
-                <hr />
-                <!-- End of Right News 1 -->
+            <!-- start of first Column -->
+            <div class="smallbox first-column col-sm-12 c col-lg-4 d-block   nopadding">
+                <div class="first-small-box ">
+                    <img style="border-radius: 8px;" class="break-news-img  img-responsive" src="assets/img/Breaking.webp">
 
-                 <!-- Start of Right News 2 -->
-                 <div class="news-box col-12 col-sm-12  d-flex mt-3 nopadding">
-                    <div class=" headline-box nopadding col-8 col-sm-8 d-block routinglinks">
-                        <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews()">Finding Nirmala: Cong mocks govt
-                                as finance minister absent from key pre-budget meet</a></h4>
-                        <p class="headline-para mt-3 ">Delhi election: What is at stake for Kejriwal, Modi and Rahul
-                            Gandhi?</p>
-                    </div>
-                    <div class="news-img-box col-4 col-sm-4   nopadding ">
-                        <a (click)="gotoBigNews()"><img class="news-img img-responsive" src="assets/img/girl.jpg"></a>
-                    </div>
-                </div>
-                <div class=" date-n-social-icons-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
-                    <h6 class="date mt-3 col-6 col-sm-6 col-md-6 col-lg-6">
-                      <i class="fa fa-clock-o" style="font-size:14px;color:red"></i> January 07, 2020 4:03 PM
-                    </h6>
-                    <div class="social-icons-box mt-3 col-6 col-sm-6 col-md-6 col-lg-6 d-inline nopadding">
-                       <a > <img class="social-icons-img img-responsive" src="assets/img/youtube.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/instagram.jpg"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/twitter.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/facebook.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/whatsapp.png"></a>
-                    </div>
-                </div>
-                <hr />
-                <!-- End of Right News 2 -->
+                    <div class=" home-headline-box d-flex  col-lg-12 mt-4 " *ngFor="let data of indialist">
+                        <div class=" col-lg-5 nopadding ">
+                            <a style="font-family:sans-serif" class="nopadding" (click)="gotoBigNews(data.headline)"><img
+                                    class="headline-img img-responsive " src={{data.imgUpload}}></a>
+                        </div>
 
-                
-                <!-- Start of Right News 3 -->
-                <div class="news-box col-12 col-xs-12 col-sm-12  d-flex mt-3 nopadding">
-                    <div class=" headline-box nopadding col-8 col-xs-8 col-sm-8 d-block routinglinks">
-                        <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews()">Finding Nirmala: Cong mocks govt
-                                as finance minister absent from key pre-budget meet</a></h4>
-                        <p class="headline-para mt-3 ">Delhi election: What is at stake for Kejriwal, Modi and Rahul
-                            Gandhi?</p>
-                    </div>
-                    <div class="news-img-box col-4 col-xs-4 col-sm-4   nopadding ">
-                        <a (click)="gotoBigNews()"><img class="news-img img-responsive" src="assets/img/girl.jpg"></a>
+                        <div class="headline-box col-lg-7">
+                            <b class="headline mt-2  nopadding text-justify"><a
+                                    (click)="gotoBigNews(data.headline)">{{data.headline}}</a></b>
+                        </div>
                     </div>
                 </div>
-                <div class=" date-n-social-icons-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
-                    <h6 class="date mt-3 col-6 col-sm-6 col-md-6 col-lg-6">
-                      <i class="fa fa-clock-o" style="font-size:14px;color:red"></i> January 07, 2020 4:03 PM
-                    </h6>
-                    <div class="social-icons-box mt-3 col-6 col-sm-6 col-md-6 col-lg-6 d-inline nopadding">
-                       <a > <img class="social-icons-img img-responsive" src="assets/img/youtube.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/instagram.jpg"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/twitter.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/facebook.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/whatsapp.png"></a>
-                    </div>
-                </div>
-                <hr />
-                <!-- End of Right News 3 -->
-
-                <!-- Start of Right News 4 -->
-                <div class="news-box col-12 col-xs-12 col-sm-12  d-flex mt-3 nopadding">
-                    <div class=" headline-box nopadding col-8 col-xs-8 col-sm-8 d-block routinglinks">
-                        <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews()">Finding Nirmala: Cong mocks govt
-                                as finance minister absent from key pre-budget meet</a></h4>
-                        <p class="headline-para mt-3 ">Delhi election: What is at stake for Kejriwal, Modi and Rahul
-                            Gandhi?</p>
-                    </div>
-                    <div class="news-img-box col-4 col-xs-4 col-sm-4   nopadding ">
-                        <a (click)="gotoBigNews()"><img class="news-img img-responsive" src="assets/img/girl.jpg"></a>
-                    </div>
-                </div>
-                <div class=" date-n-social-icons-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
-                    <h6 class="date mt-3 col-6 col-sm-6 col-md-6 col-lg-6">
-                      <i class="fa fa-clock-o" style="font-size:14px;color:red"></i> January 07, 2020 4:03 PM
-                    </h6>
-                    <div class="social-icons-box mt-3 col-6 col-sm-6 col-md-6 col-lg-6 d-inline nopadding">
-                       <a > <img class="social-icons-img img-responsive" src="assets/img/youtube.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/instagram.jpg"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/twitter.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/facebook.png"></a>
-                       <a> <img class="social-icons-img img-responsive" src="assets/img/whatsapp.png"></a>
-                    </div>
-                </div>
-                <hr />
-                <!-- End of Right News 4 -->
             </div>
-            <!-- End of Right Sub Section -->
+            <!-- End of first Column -->
+
+            <!-- start of Second Column -->
+            <div class="smallbox col-sm-12  col-lg-4 nopadding">
+                <div class="second-small-box">
+                    <iframe class="col-sm-12 nopadding" width="100%" height="230" src="https://www.youtube.com/embed/jn8s87zaTwo" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                   <div class="short-headline-box d-flex mt-3 col-lg-12 nopadding" *ngFor="let data of indialist">
+                       <div class="short-headline short-headline1 col-lg-6 "><b>{{data.headline}}</b></div>
+                       <div class="short-headline short-headline1 col-lg-6 "><b>{{data.headline}}</b></div>
+                   </div>
+                </div>
+            </div>
+            <!-- End of third Column -->
+
+            <!-- start of third Column -->
+            <div class=" smallbox col-sm-12 col-lg-4 pl-4  pr-0">
+               <div class="third-small-box">
+                <div class="live-update-box pb-3 ">
+                    <h3 class="mt-2" style="color:red">LIVE<span style="color:black"> UPDATES</span></h3>
+                    <div class=" sub-box col-lg-12">
+                        <div class="live-headline pt-1 d-block" *ngFor="let data of indialist">
+                            <h5 style="color:red;font-size: 13px;">2:30 PM</h5>
+                            <h6 class="pl-2">{{data.headline}}</h6>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news-video-box col-sm-12 mt-4 p-3">
+                    <h2 style="color:#000">NEWS VIDEO</h2>
+                    <div class="single-video-slider">
+                        <section>
+                            <div id="carouselExampleFade" class="carousel slide carousel-fade" >
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <iframe class="col-sm-12 nopadding" width="100%" height="250" src="https://www.youtube.com/embed/jn8s87zaTwo" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/-wx0A1WoVio" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/OREgsjR56U4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>                                    
+                                </div>
+                                <a (click)="stopvideo()" class=" carousel-btn carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class=" carousel-btn carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+               </div>
+            </div>
+            <!-- End of third Column -->
         </div>
-        <!-- End Of Right News Section -->
+        <!-- End Of Home News Section -->
+
+            <div class="video-slider-box my-3 ">
+                                
+   
+              </div>
     </div>
+    <!-- End Of Box -->
 </div>
+<!-- End Of Container --> 
 <app-footer></app-footer>

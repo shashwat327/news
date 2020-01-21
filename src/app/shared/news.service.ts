@@ -17,9 +17,7 @@ export class NewsService {
   getWorld() {
     return this.firestore.collection('world').snapshotChanges();
   }
-  GetBreak() {
-    return this.firestore.collection('breaknewz').snapshotChanges();
-  }
+  
 
   getSports() {
     return this.firestore.collection('sports').snapshotChanges();
@@ -33,6 +31,9 @@ export class NewsService {
     return this.firestore.collection('business').snapshotChanges();
   }
 
+  GetBreak() {
+    return this.firestore.collection('breaknewz').snapshotChanges();
+  }
 }
 
 
