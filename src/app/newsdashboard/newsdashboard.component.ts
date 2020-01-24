@@ -59,7 +59,9 @@ goHome() {
     // console.log(value);
     // console.log(value.dateTime);
 
-    if(value.category==="India"){
+    if(value.category==="India" ){
+      if(value.subcategory==="Top News")
+      {
       this.ngxService.start();
 
       if(this.imageUploadUrl){
@@ -70,6 +72,21 @@ goHome() {
     
      this.firestore.collection('india').add(value);
       this.ngxService.stop();
+    }
+    else{
+      
+      this.ngxService.start();
+
+      if(this.imageUploadUrl){
+        value.imgUpload = this.imageUploadUrl;
+      }else{
+        value.imgUpload = "";
+      }
+    
+     this.firestore.collection('india2').add(value);
+      this.ngxService.stop();
+
+    }
   
  }else if (value.category==="World"){
       this.ngxService.start();

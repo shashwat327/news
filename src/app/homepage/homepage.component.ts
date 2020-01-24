@@ -5,6 +5,7 @@ import { Breakingnews } from '../shared/breakingnews.model';
 import { News } from '../shared/news.model';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
+
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -23,20 +24,12 @@ export class HomepageComponent implements OnInit {
   listArray:any;
   newindialist: any;
 
-  // images = [700, 533, 807, 124].map((n) => `https://picsum.photos/id/${n}/900/500`);
- 
-
- 
   constructor(    private router: Router,
                   private service:NewsService,
-                  config: NgbCarouselConfig)
-     {
-                    config.interval = 100000;
-                    config.wrap = true;
-                   
-     }
+                  config: NgbCarouselConfig){}
 
-  gotoBigNews(data, val) {
+gotoBigNews(data, val) 
+{
     if(val==='india')
     {
     this.router.navigate(['sub',{india:data}]);
@@ -101,5 +94,7 @@ export class HomepageComponent implements OnInit {
   // stopvideo(){
 
   // }
+
+  
 
 }

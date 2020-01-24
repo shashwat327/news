@@ -10,17 +10,32 @@ hr{
     margin: 5px !important;
 }
 
-.smallbox{
+.test{
     /* border: 1px solid black; */
     height: auto;
+}
+
+.breaking-nwz-img-box {
+    position: relative;
+    /* text-align: center; */
+    color: white;
+}
+.breaking-nwz-img-box h4{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    cursor: pointer;
+    background-color: blue;
+    padding-right: 20px;
+    height:30px;
+    
 }
 
 .break-news-img{
     width: 100%;
     height:230px;
+    cursor: pointer;
 }
-
-
 .home-headline-box{
     height:auto;
     border-radius: 5px;
@@ -37,20 +52,28 @@ hr{
 .headline{
     font-family: sans-serif;
     color:#000;
+    font-size: 15px;
+    line-height: 0.6;
 }
-.short-headline{
+.short-headline {
     width: 100%;
     height: auto;
-    /* border: 1px solid black; */
-    border-left: 4px solid orangered;
-    background-color: yellowgreen;
-}
-.short-headline b{
-    color:#000 !important;
-    font-family: sans-serif;
-    font-size: 16px;
-    text-align: justify;
     
+    /* border: 1px solid black; */
+    
+    /* background-color: yellowgreen; */
+}
+/* .short-headline-box {
+    background-color: coral;
+} */
+.short-headline h6{
+   
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    padding-left: 10px; 
+    color:#000;
+    border-left: 4px solid orangered;  
 }
 .live-update-box{
     border: 1px solid grey;
@@ -60,7 +83,7 @@ hr{
 .sub-box{
     border: 1px solid grey;
     width:100%;
-    height:300px;
+    height:310px;
     overflow-y: scroll;
     border-radius: 8px 0 0 8px;
     padding: 0 10px;
@@ -77,6 +100,10 @@ hr{
 }
 .live-headline h6{
     border-left: 1px solid grey;
+    font-family: sans-serif;
+    color:#000;
+    font-size: 15px;
+    font-weight: 550;
     /* background-color: yellow; */
 }
 
@@ -87,10 +114,10 @@ hr{
     border-radius: 8px;
 }
 
-.video-slider-box{
+.horizontal-video-slider-box{
     width:100%;
-    height:200px;
-    border: 2px solid black;
+    height:auto;
+    /* border: 2px solid black; */
 }
 
 .single-video-slider{
@@ -111,10 +138,24 @@ hr{
     font-weight:bold;
     color:orangered;
 }
+/*******************/
+.slider-btn{
+    background-color: black;
+    color:white;
+    height: 30px;
+    top:45%;
+    width:30px;
+    bottom:30px;
+}
+/* .test{
+    margin: 0 10px;
+    width: 230px;
+    height:180px;
+} */
 
 
 
-@media only screen and (max-width: 600px) { 
+@media only screen and (max-width: 601px) { 
     .box{
         margin: 100px 10px 0;
         /* border:1px solid red; */
@@ -141,6 +182,23 @@ hr{
     .home-headline-box{
         height:120px;
         box-shadow: 0px 5px 10px 2px grey;
+    }
+    .test{
+        margin: 0 4px;
+        width: 70px;
+        height:60px;
+    }
+    .img-fluid{
+        width: 100%;
+        height:100%;
+    }
+    .slider-btn{
+        top: 23px;
+        width: 15px;
+        height:15px;
+    }
+    .abc{
+        padding: 0 auto !important;
     }
 }
 
@@ -172,6 +230,23 @@ hr{
     .home-headline-box{
         height:100px;
         box-shadow: 0px 5px 10px 2px grey;
+    }
+    .test{
+        margin: 0 5px;
+        width: 100px;
+        height:80px;
+    }
+    .img-fluid{
+        width: 100%;
+        height:100%;
+    }
+    .slider-btn{
+        top: 45%;
+        width: 30px;
+        height:20px;
+    }
+    .abc{
+        padding: 0 auto !important;
     }
 }
 
@@ -206,6 +281,18 @@ hr{
         height:80px;
         box-shadow: 0px 5px 10px 2px grey;
     }
+    .test{
+        margin: 0 5px;
+    }
+    .img-fluid{
+        width: 160px;
+        height:160px;
+    }
+    .slider-btn{
+        top: 45%;
+        width: 30px;
+        height:20px;
+    }
 }
 
 
@@ -235,6 +322,23 @@ hr{
         height:auto;
         box-shadow: 0px 5px 10px 2px grey;
     }
+    .test{
+        margin: 0 5px;
+        width: 150;
+        height:180px;
+    }
+    /* .img-fluid{
+        width: auto;
+        height:100%;
+    } */
+    .slider-btn{
+        top: 45%;
+        width: 30px;
+        height:20px;
+    }
+    .carousel-inner{
+        background-color: rgb(255, 0, 191);
+    }
 }
 
 
@@ -249,5 +353,26 @@ hr{
     } 
     .first-small-box{
         padding-right: 20px !important;
+    }
+    .test{
+        margin: 0 7px;
+        background-color: brown;
+        width: 234px;
+        height:180px;
+    }
+    .img-fluid{
+        width: 100%;
+        height:100%;
+    }
+    .slider-btn{
+        top: 45%;
+        width: 30px;
+        height:20px;
+    }
+    .carousel-inner{
+        background-color: aqua;
+    }
+    .carousel-item{
+        background-color: coral;
     }
 }

@@ -38,8 +38,10 @@
             <!-- start of first Column -->
             <div class="smallbox first-column col-sm-12 c col-lg-4 d-block   nopadding">
                 <div class="first-small-box ">
-                    <img style="border-radius: 8px;" class="break-news-img  img-responsive" src="assets/img/Breaking.webp">
-
+                    <div class="breaking-nwz-img-box">
+                       <img  style="border-radius: 8px;" class="break-news-img  img-responsive" src="assets/img/Breaking.webp">
+                       <h4  class="test">headline</h4>
+                    </div>
                     <div class=" home-headline-box d-flex  col-lg-12 mt-4 " *ngFor="let data of indialist">
                         <div class=" col-lg-5 nopadding ">
                             <a style="font-family:sans-serif" class="nopadding" (click)="gotoBigNews(data.headline)"><img
@@ -47,7 +49,7 @@
                         </div>
 
                         <div class="headline-box col-lg-7">
-                            <b class="headline mt-2  nopadding text-justify"><a
+                            <b class="headline mt-2  nopadding "><a
                                     (click)="gotoBigNews(data.headline)">{{data.headline}}</a></b>
                         </div>
                     </div>
@@ -61,10 +63,12 @@
                     <iframe class="col-sm-12 nopadding" width="100%" height="230" src="https://www.youtube.com/embed/jn8s87zaTwo" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                   <div class="short-headline-box d-flex mt-3 col-lg-12 nopadding" *ngFor="let data of indialist">
-                       <div class="short-headline short-headline1 col-lg-6 "><b>{{data.headline}}</b></div>
-                       <div class="short-headline short-headline1 col-lg-6 "><b>{{data.headline}}</b></div>
-                   </div>
+                   <div class="short-headline-box d-flex  col-lg-12 nopadding" *ngFor="let data of indialist">
+                       <div class="short-headline p-2 short-headline1 col-lg-6 "><h6><b>{{data.headline}}</b></h6><hr /></div>
+                       
+                       <div class="short-headline p-2 short-headline1 col-lg-6 "><h6><b>{{data.headline}}</b></h6> <hr /></div>
+                       
+                    </div>
                 </div>
             </div>
             <!-- End of third Column -->
@@ -119,10 +123,42 @@
         </div>
         <!-- End Of Home News Section -->
 
-            <div class="video-slider-box my-3 ">
-                                
-   
-              </div>
+           <div class=" xyz  my-3">
+            <h3 class="photo-galry-text"> Photo Gallery</h3>
+            <div class="horizontal-video-slider-box ">
+                <!-- <div  class="carousel slide w-100 " data-ride="carousel">
+                    <div class=" abc carousel-inner px-4 w-100" role="listbox">
+                        <div  class="carousel-item row no-gutters active ">
+                            <div  class="test col-3 ml-4    float-left"><img class="img-fluid img-responsive" src="assets/img/black-bg.jpg"></div>
+                            <div class=" test  col-3   float-left"><img class="img-fluid img-responsive" src="assets/img/blue-bg.jpg"></div>
+                            <div class="test  col-3   float-left"><img class="img-fluid img-responsive" src="assets/img/kashmir.jpg"></div>
+                            <div class="test col-3   float-left"><img class="img-fluid img-responsive" src="assets/img/images-bg.jpg"></div>
+
+                        </div>
+                        <div class="carousel-item row no-gutters">
+                            <div class="test col-3 ml-4 float-left"><img class="img-fluid img-responsive" src="assets/img/firstimage.jpg"></div>
+                            <div class="test col-3 float-left"><img class="img-fluid img-responsive" src="assets/img/secondimage.jpg"></div>
+                            <div class="test col-3 float-left"><img class="img-fluid img-responsive" src="assets/img/thirdimage.jpg"></div>
+                            <div class="test col-3 float-left"><img class="img-fluid img-responsive" src="assets/img/fourthimage.jpg"></div>
+                        </div>
+                    </div>
+                    <a  class="slider-btn carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="slider-btn carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>        -->
+                 
+                <app-imgslider></app-imgslider>
+
+
+
+
+            </div>
+           </div>
     </div>
     <!-- End Of Box -->
 </div>

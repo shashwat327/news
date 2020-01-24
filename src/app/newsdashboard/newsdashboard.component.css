@@ -19,7 +19,7 @@
     background-color: red;
     color:white;
     border: none;
-    padding: 8px 27px;
+    padding: 4px 10px;
     border-radius: 4px;
     font-size: 18px;
     cursor: pointer;
@@ -31,11 +31,11 @@
 
 main {
     padding: 10px 0;
+    margin: 0 auto;
     background-image:url(/assets/img/images-bg.jpg);
 	background-position: center;
     background-size: cover;
     background-attachment: fixed;
-
 }
 .form-group label{
     font-weight:500;

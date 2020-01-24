@@ -17,16 +17,19 @@
                 <!-- Start Of Left Headline Section -->
                 <div class="news-box  col-12 col-sm-12 col-md-12 col-lg-12  d-block mt-1 nopadding" *ngFor="let data of list">
    
-                    <div  class=" headline-n-img-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
-                          <div class=" headline-box nopadding col-8 col-sm-8 col-md-8 col-lg-8  d-block ">
-                             <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews(data.headline)">{{data.headline}}</a></h4>
-                             <p class="headline-para mt-2 mb-0 nopadding ">{{data.description}}</p>
+                    <div   class=" headline-n-img-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
+                          <div   class=" headline-box nopadding col-7 col-sm-7 col-md-7 col-lg-7  d-block ">
+                             <div style=" height: 115px;" ><h4 class="headline mt-2 mb-1 nopadding"><a (click)="gotoBigNews(data.headline)">{{data.headline}}</a></h4></div>
+                             <div style=" height:45px"><p class="headline-para mt-2 mb-0 nopadding ">{{data.description}}</p></div>
                           </div>
+
                           
-                          <div  class="news-img-box col-4 col-sm-4 col-md-4 col-lg-4 nopadding ">
+                          
+                          <div  class="news-img-box col-5 col-sm-5 col-md-5 col-lg-5 nopadding ">
                             <a (click)="gotoBigNews(data.headline)"><img class="news-img img-responsive" src={{data.imgUpload}}></a>
                          </div>
                     </div>
+
                     
 
                     <div   class=" date-n-social-icons-box mt-1 d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
@@ -53,18 +56,21 @@
             <div class="news-right ">
                 <h1 class="pl-4  text-white">Whats Going On</h1>
                 <!-- Start of Right Headline Section -->
-                <div  class="news-box  col-12 col-sm-12 col-md-12 col-lg-12  d-block mt-1 nopadding" *ngFor="let data of list">
+                <div  class="news-box  col-12 col-sm-12 col-md-12 col-lg-12  d-block mt-1 nopadding" *ngFor="let data of list2">
    
-                    <div  class="headline-n-img-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
-                          <div  class=" headline-box nopadding col-8 col-sm-8 col-md-8 col-lg-8  d-block ">
-                             <h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews(data.headline)">{{data.headline}}</a></h4>
-                             <p class="headline-para mt-2 mb-0 nopadding ">{{data.description}}</p>
-                          </div>
-                          
-                          <div class="news-img-box col-4 col-sm-4 col-md-4 col-lg-4 nopadding ">
-                            <a (click)="gotoBigNews(data.headline)"><img class="news-img img-responsive" src={{data.imgUpload}}></a>
-                         </div>
-                    </div>
+                    <div   class=" headline-n-img-box d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">
+                        <div   class=" headline-box nopadding col-7 col-sm-7 col-md-7 col-lg-7  d-block ">
+                           <div style=" height: 115px;" ><h4 class="headline mt-2 nopadding"><a (click)="gotoBigNews2(data.headline)">{{data.headline}}</a></h4></div>
+                           <div style=" height:45px"><p class="headline-para mt-1 mb-0 nopadding ">{{data.description}}</p></div>
+                        </div>
+
+                        
+                        
+                        <div  class="news-img-box col-5 col-sm-5 col-md-5 col-lg-5 nopadding ">
+                          <a (click)="gotoBigNews2(data.headline)"><img class="news-img img-responsive" src={{data.imgUpload}}></a>
+                       </div>
+                  </div>
+
                     
 
                     <div    class=" date-n-social-icons-box mt-1 d-flex col-12 col-sm-12 col-md-12 col-lg-12 nopadding">

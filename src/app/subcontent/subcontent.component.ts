@@ -12,6 +12,7 @@ export class SubcontentComponent implements OnInit {
 
 
   list: News[];
+  list2: News[];
   headlineData: any;
   paragraphData: any;
   imageUploadData: string;
@@ -22,6 +23,8 @@ export class SubcontentComponent implements OnInit {
   headlineDataS: any;
   headlineDataM: any;
   headlineDataB: any;
+  headlineDataI2: string;
+  NwzSubCatgry: string;
   constructor(     private router: Router,
                    private service:NewsService,
                    private route: ActivatedRoute) { }
@@ -36,6 +39,7 @@ export class SubcontentComponent implements OnInit {
 
   ngOnInit() {
     this.headlineDataI=  this.route.snapshot.paramMap.get('india');
+    this.headlineDataI2=  this.route.snapshot.paramMap.get('india2');
     this.headlineDataW=  this.route.snapshot.paramMap.get('world');
     this.headlineDataS=  this.route.snapshot.paramMap.get('sports');
     this.headlineDataM=  this.route.snapshot.paramMap.get('movies');
@@ -111,9 +115,22 @@ this.service.getBusiness().subscribe(actionArray => {
     this.getNewsData();
   //  console.log(JSON.stringify(this.list)); 
 });
-}
-}
+}else if( this.headlineDataI2)
+{
+this.service.getIndia2().subscribe(actionArray => {
+  this.list2 = actionArray.map(a => {
+    const data = a.payload.doc.data() as News;
+    data.id = a.payload.doc.id;
+    // console.log(data);
+    return data; 
+  });
+  this.headlineData=  this.route.snapshot.paramMap.get('india2')
 
+    this.getNewsData2();
+  //  console.log(JSON.stringify(this.list)); 
+});
+}
+}
 
  getNewsData(){
 for(var i=0;i<this.list.length;i++){
@@ -122,11 +139,27 @@ for(var i=0;i<this.list.length;i++){
    this.paragraphData= this.list[i].paragraph;
    this.imageUploadData= this.list[i].imgUpload;
    this.dataTimeData=this.list[i].dateTime;
-   this.NwzCatgry=this.list[i].category
+   this.NwzCatgry=this.list[i].category;
+   this.NwzSubCatgry=this.list[i].subcategory;
    break;
   }
 }
 // console.log(this.paragraphData);
 }
+
+getNewsData2(){
+  for(var i=0;i<this.list2.length;i++){
+    if(this.list2[i].headline==this.headlineData){
+  
+     this.paragraphData= this.list2[i].paragraph;
+     this.imageUploadData= this.list2[i].imgUpload;
+     this.dataTimeData=this.list2[i].dateTime;
+     this.NwzCatgry=this.list2[i].category;
+     this.NwzSubCatgry=this.list2[i].subcategory;
+     break;
+    }
+  }
+  // console.log(this.paragraphData);
+  }
 
 }

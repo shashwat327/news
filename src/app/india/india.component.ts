@@ -10,6 +10,7 @@ import { News } from '../shared/news.model';
 })
 export class IndiaComponent implements OnInit {
   list: News[];
+  list2: News[];
   constructor(private router: Router, private service:NewsService) { }
 
   goHome() {
@@ -22,8 +23,14 @@ export class IndiaComponent implements OnInit {
     // console.log(data);
     this.router.navigate(['sub',{india:data}]); 
   }
+
+  gotoBigNews2(data) {
+    // console.log(data);
+    this.router.navigate(['sub',{india2:data}]); 
+  }
   
   ngOnInit() {
+
     this.service.getIndia().subscribe(actionArray => {
       this.list = actionArray.map(a => {
         const data = a.payload.doc.data() as News;
@@ -33,6 +40,17 @@ export class IndiaComponent implements OnInit {
       });
       // console.log(JSON.stringify(this.list)); 
    });
+
+   this.service.getIndia2().subscribe(actionArray => {
+    this.list2 = actionArray.map(a => {
+      const data = a.payload.doc.data() as News;
+      data.id = a.payload.doc.id;
+      // console.log(data);
+      return data; 
+    });
+    console.log(JSON.stringify(this.list2)); 
+ });
+
   }
 
 }

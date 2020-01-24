@@ -19,6 +19,7 @@ import { NgxUiLoaderModule } from  'ngx-ui-loader';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgImageSliderModule } from 'ng-image-slider';
  
 
 import { AppComponent } from './app.component';
@@ -37,6 +38,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { BusinessComponent } from './business/business.component';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { BrakingnewzComponent } from './brakingnewz/brakingnewz.component';
+import { ImgsliderComponent } from './imgslider/imgslider.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,7 @@ import { BrakingnewzComponent } from './brakingnewz/brakingnewz.component';
     MoviesComponent,
     BusinessComponent,
     BrakingnewzComponent,
+    ImgsliderComponent,
 
   ],
   imports: [
@@ -65,7 +68,7 @@ import { BrakingnewzComponent } from './brakingnewz/brakingnewz.component';
     AngularFirestoreModule,  AngularFireStorageModule,
     OwlDateTimeModule, OwlNativeDateTimeModule,  NgxUiLoaderModule,
     MatDatepickerModule, MatNativeDateModule, NgMultiSelectDropDownModule.forRoot(),
-    NgbModule
+    NgbModule, NgImageSliderModule
    
   ],
   providers: [NewsService],

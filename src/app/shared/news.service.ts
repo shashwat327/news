@@ -14,6 +14,12 @@ export class NewsService {
     return this.firestore.collection('india').snapshotChanges();
   }
 
+  getIndia2()
+  
+  {
+    return this.firestore.collection('india2').snapshotChanges();
+  }
+
   getWorld() {
     return this.firestore.collection('world').snapshotChanges();
   }
