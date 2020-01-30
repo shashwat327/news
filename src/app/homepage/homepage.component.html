@@ -42,7 +42,7 @@
                        <img  style="border-radius: 8px;" class="break-news-img  img-responsive" src="assets/img/Breaking.webp">
                        <h4  class="test">headline</h4>
                     </div>
-                    <div class=" home-headline-box d-flex  col-lg-12 mt-4 " *ngFor="let data of indialist">
+                    <div class=" home-headline-box d-flex  col-lg-12 mt-4 " *ngFor="let data of indiaHomeList">
                         <div class=" col-lg-5 nopadding ">
                             <a style="font-family:sans-serif" class="nopadding" (click)="gotoBigNews(data.headline)"><img
                                     class="headline-img img-responsive " src={{data.imgUpload}}></a>
@@ -63,7 +63,7 @@
                     <iframe class="col-sm-12 nopadding" width="100%" height="230" src="https://www.youtube.com/embed/jn8s87zaTwo" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                   <div class="short-headline-box d-flex  col-lg-12 nopadding" *ngFor="let data of indialist">
+                   <div class="short-headline-box d-flex  col-lg-12 nopadding" *ngFor="let data of indiaHomeList">
                        <div class="short-headline p-2 short-headline1 col-lg-6 "><h6><b>{{data.headline}}</b></h6><hr /></div>
                        
                        <div class="short-headline p-2 short-headline1 col-lg-6 "><h6><b>{{data.headline}}</b></h6> <hr /></div>
@@ -79,7 +79,7 @@
                 <div class="live-update-box pb-3 ">
                     <h3 class="mt-2" style="color:red">LIVE<span style="color:black"> UPDATES</span></h3>
                     <div class=" sub-box col-lg-12">
-                        <div class="live-headline pt-1 d-block" *ngFor="let data of indialist">
+                        <div class="live-headline pt-1 d-block" *ngFor="let data of indiaHomeList">
                             <h5 style="color:red;font-size: 13px;">2:30 PM</h5>
                             <h6 class="pl-2">{{data.headline}}</h6>
                             <hr />
@@ -153,9 +153,6 @@
                 </div>        -->
                  
                 <app-imgslider></app-imgslider>
-
-
-
 
             </div>
            </div>

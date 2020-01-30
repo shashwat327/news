@@ -23,6 +23,7 @@ export class HomepageComponent implements OnInit {
   businesslist: News[];
   listArray:any;
   newindialist: any;
+  indiaHomeList= [];
 
   constructor(    private router: Router,
                   private service:NewsService,
@@ -74,9 +75,14 @@ gotoBigNews(data, val)
         return data; 
         
       });
-       console.log(JSON.stringify(this.indialist)); 
+      //  console.log(JSON.stringify(this.indialist)); 
+      for(let i=0; i<5; i++)
+     {
+      this.indiaHomeList.push( this.indialist[i] );
+       console.log(JSON.stringify(this.indiaHomeList));
+     }
    });
-   
+
   }
 
   // getWorldHome(){
