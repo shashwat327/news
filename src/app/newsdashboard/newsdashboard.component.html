@@ -12,8 +12,35 @@
 
       <div class="collapse py-2 navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto topnav">
+          <li class="nav-item active">
+            <a class="nav-link" (click)="goHome()">HOME <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="gotoIndia()">INDIA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="gotoWorld()">WORLD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="gotoSports()">SPORTS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a (click)="gotoMovies()" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              MOVIES
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="gotoBusiness()">BUSINESS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" (click)="gotoContactUs()">CONTACT</a>
+          </li>
           <li class="nav-item pr-5">
-            <a class="nav-link px-4 text-white log-out" (click)="goHome()"> LOG OUT</a>
+            <a class="nav-link px-2 text-white log-out" (click)="goHome()"> LOG OUT</a>
           </li>
         </ul>
       </div>

@@ -26,12 +26,12 @@
             aria-haspopup="true" aria-expanded="false">
             MOVIES
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Carfax</a>
             <a class="dropdown-item" href="#">Carproof</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Omnivic</a>
-          </div>
+          </div> -->
         </li>
         <li class="nav-item">
           <a class="nav-link" (click)="gotoBusiness()">BUSINESS</a>
@@ -40,10 +40,10 @@
           <a class="nav-link" href="#">ABOUT</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="#">CONTACT</a>
+          <a class="nav-link" (click)="gotoContactUs()">CONTACT</a>
         </li>
         <li class="nav-item pr-5">
-          <a class="nav-link" (click)="gotoForm()">FORM</a>
+          <a class="nav-link" (click)="gotoForm()">LOGIN</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link btn btn-primary text-white" type="button" href="#" data-toggle="modal"

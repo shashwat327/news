@@ -31,6 +31,9 @@ export class HeaderComponent implements OnInit {
   gotoBusiness() {
     this.router.navigate(['business']); 
   }
+  gotoContactUs(){
+    this.router.navigate(['contact']); 
+  }
   ngOnInit() {
     
   }

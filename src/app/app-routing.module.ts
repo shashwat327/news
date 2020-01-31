@@ -10,6 +10,7 @@ import { SportsComponent } from './sports/sports.component';
 import { MoviesComponent } from './movies/movies.component';
 import { BusinessComponent } from './business/business.component';
 import { BrakingnewzComponent } from './brakingnewz/brakingnewz.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 
 const routes: Routes = [
@@ -71,6 +72,12 @@ const routes: Routes = [
     path: 'dashboard',
     pathMatch: 'full',
     component: NewsdashboardComponent,
+    children: []
+  },
+  {
+    path: 'contact',
+    pathMatch: 'full',
+    component: ContactusComponent,
     children: []
   },
 ];

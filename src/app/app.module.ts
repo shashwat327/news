@@ -40,6 +40,7 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { BrakingnewzComponent } from './brakingnewz/brakingnewz.component';
 import { ImgsliderComponent } from './imgslider/imgslider.component';
 import { Imgslider2Component } from './imgslider2/imgslider2.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { Imgslider2Component } from './imgslider2/imgslider2.component';
     BrakingnewzComponent,
     ImgsliderComponent,
     Imgslider2Component,
+    ContactusComponent,
 
   ],
   imports: [
