@@ -89,56 +89,124 @@ goHome() {
     }
   
  }else if (value.category==="World"){
-      this.ngxService.start();
+  if(value.subcategory==="Top News")
+  {
+  this.ngxService.start();
 
-     if(this.imageUploadUrl){
-      value.imgUpload = this.imageUploadUrl;
-     }else{
+  if(this.imageUploadUrl){
+    value.imgUpload = this.imageUploadUrl;
+  }else{
     value.imgUpload = "";
-     }
+  }
 
-    this.firestore.collection('world').add(value);
-    this.ngxService.stop();
+ this.firestore.collection('world').add(value);
+  this.ngxService.stop();
+}
+else{
+  
+  this.ngxService.start();
+
+  if(this.imageUploadUrl){
+    value.imgUpload = this.imageUploadUrl;
+  }else{
+    value.imgUpload = "";
+  }
+
+ this.firestore.collection('world2').add(value);
+  this.ngxService.stop();
+
+}
   }else if (value.category==="Sports"){
+    if(value.subcategory==="Top News")
+    {
     this.ngxService.start();
-
-   if(this.imageUploadUrl){
-    value.imgUpload = this.imageUploadUrl;
-   }else{
-  value.imgUpload = "";
-   }
-
-  this.firestore.collection('sports').add(value);
-  this.ngxService.stop();
+  
+    if(this.imageUploadUrl){
+      value.imgUpload = this.imageUploadUrl;
+    }else{
+      value.imgUpload = "";
+    }
+  
+   this.firestore.collection('sports').add(value);
+    this.ngxService.stop();
+  }
+  else{
+    
+    this.ngxService.start();
+  
+    if(this.imageUploadUrl){
+      value.imgUpload = this.imageUploadUrl;
+    }else{
+      value.imgUpload = "";
+    }
+  
+   this.firestore.collection('sports2').add(value);
+    this.ngxService.stop();
+  
+  }
   }else if (value.category==="Movies"){
+    if(value.subcategory==="Top News")
+    {
     this.ngxService.start();
-
-   if(this.imageUploadUrl){
-    value.imgUpload = this.imageUploadUrl;
-   }else{
-  value.imgUpload = "";
+  
+    if(this.imageUploadUrl){
+      value.imgUpload = this.imageUploadUrl;
+    }else{
+      value.imgUpload = "";
+    }
+  
+   this.firestore.collection('movies').add(value);
+    this.ngxService.stop();
+  }
+  else{
+    
+    this.ngxService.start();
+  
+    if(this.imageUploadUrl){
+      value.imgUpload = this.imageUploadUrl;
+    }else{
+      value.imgUpload = "";
+    }
+  
+   this.firestore.collection('movies2').add(value);
+    this.ngxService.stop();
    }
-
-  this.firestore.collection('movies').add(value);
-  this.ngxService.stop();
+                  
   }else if (value.category==="Business"){
-          
-                      this.ngxService.start();
-
-                     if(this.imageUploadUrl){
-                     value.imgUpload = this.imageUploadUrl;}
-                     else{
-                            value.imgUpload = "" }
-                      this.firestore.collection('business').add(value);
-                      this.ngxService.stop();
+    if(value.subcategory==="Top News")
+    {
+    this.ngxService.start();
+  
+    if(this.imageUploadUrl){
+      value.imgUpload = this.imageUploadUrl;
+    }else{
+      value.imgUpload = "";
+    }
+  
+   this.firestore.collection('business').add(value);
+    this.ngxService.stop();
+  }
+  else{
+    
+    this.ngxService.start();
+  
+    if(this.imageUploadUrl){
+      value.imgUpload = this.imageUploadUrl;
+    }else{
+      value.imgUpload = "";
+    }
+  
+   this.firestore.collection('business2').add(value);
+    this.ngxService.stop();
+   }
                   
   }
   }
   
-        onSelect(Element){
-                             console.log(Element);
-                             // console.log(this.shashwat)
-                         } 
+        // onSelect(Element){
+        //                      console.log(Element);
+        //                      // console.log(this.shashwat)
+        //                  } 
 
 
 

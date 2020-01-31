@@ -12,15 +12,18 @@ export class BusinessComponent implements OnInit {
 
  
   list: News[];
+  list2: News[];
   constructor(private router: Router,private service:NewsService) { }
   goHome() {
     this.router.navigate(['']); 
   }
-  gotoIndia() {
-    this.router.navigate(['india']); 
-  }
+  
   gotoBigNews(data) {
     this.router.navigate(['sub',{business:data}]); 
+  }
+
+  gotoBigNews2(data) {
+    this.router.navigate(['sub',{business2:data}]); 
   }
   
   ngOnInit() {
@@ -33,6 +36,16 @@ export class BusinessComponent implements OnInit {
       });
       console.log(JSON.stringify(this.list)); 
    });
+
+   this.service.getBusiness2().subscribe(actionArray => {
+    this.list2 = actionArray.map(a => {
+      const data = a.payload.doc.data() as News;
+      data.id = a.payload.doc.id;
+      // console.log(data);
+      return data; 
+    });
+    console.log(JSON.stringify(this.list)); 
+ });
 }
 
 }

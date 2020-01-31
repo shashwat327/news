@@ -25,6 +25,10 @@ export class SubcontentComponent implements OnInit {
   headlineDataB: any;
   headlineDataI2: string;
   NwzSubCatgry: string;
+  headlineDataW2: string;
+  headlineDataS2: any;
+  headlineDataM2: string;
+  headlineDataB2: string;
   constructor(     private router: Router,
                    private service:NewsService,
                    private route: ActivatedRoute) { }
@@ -32,8 +36,21 @@ export class SubcontentComponent implements OnInit {
   goHome() {
     this.router.navigate(['']); 
   }
-  gotoIndia() {
-    this.router.navigate(['india']); 
+  gotoCategory(data) {
+
+    if(data==="India"){
+      this.router.navigate(['india']);
+    }
+    else if(data==="World"){
+      this.router.navigate(['world']);
+    } else if (data==="Sports"){
+      this.router.navigate(['sports']); 
+    }else if (data==="Movies"){
+      this.router.navigate(['movies']); 
+    }else if (data==="Business"){
+      this.router.navigate(['business']); 
+    }
+
   }
 
 
@@ -41,9 +58,13 @@ export class SubcontentComponent implements OnInit {
     this.headlineDataI=  this.route.snapshot.paramMap.get('india');
     this.headlineDataI2=  this.route.snapshot.paramMap.get('india2');
     this.headlineDataW=  this.route.snapshot.paramMap.get('world');
+    this.headlineDataW2=  this.route.snapshot.paramMap.get('world2');
     this.headlineDataS=  this.route.snapshot.paramMap.get('sports');
+    this.headlineDataS2=  this.route.snapshot.paramMap.get('sports2');
     this.headlineDataM=  this.route.snapshot.paramMap.get('movies');
+    this.headlineDataM2=  this.route.snapshot.paramMap.get('movies2');
     this.headlineDataB=  this.route.snapshot.paramMap.get('business');
+    this.headlineDataB2=  this.route.snapshot.paramMap.get('business2');
 
     if(this.headlineDataI)
     {
@@ -125,6 +146,62 @@ this.service.getIndia2().subscribe(actionArray => {
     return data; 
   });
   this.headlineData=  this.route.snapshot.paramMap.get('india2')
+
+    this.getNewsData2();
+  //  console.log(JSON.stringify(this.list)); 
+});
+}else if( this.headlineDataW2)
+{
+this.service.getWorld2().subscribe(actionArray => {
+  this.list2 = actionArray.map(a => {
+    const data = a.payload.doc.data() as News;
+    data.id = a.payload.doc.id;
+    // console.log(data);
+    return data; 
+  });
+  this.headlineData=  this.route.snapshot.paramMap.get('world2')
+
+    this.getNewsData2();
+  //  console.log(JSON.stringify(this.list)); 
+});
+}else if( this.headlineDataS2)
+{
+this.service.getSports2().subscribe(actionArray => {
+  this.list2 = actionArray.map(a => {
+    const data = a.payload.doc.data() as News;
+    data.id = a.payload.doc.id;
+    // console.log(data);
+    return data; 
+  });
+  this.headlineData=  this.route.snapshot.paramMap.get('sports2')
+
+    this.getNewsData2();
+  //  console.log(JSON.stringify(this.list)); 
+});
+}else if( this.headlineDataM2)
+{
+this.service.getMovies2().subscribe(actionArray => {
+  this.list2 = actionArray.map(a => {
+    const data = a.payload.doc.data() as News;
+    data.id = a.payload.doc.id;
+    // console.log(data);
+    return data; 
+  });
+  this.headlineData=  this.route.snapshot.paramMap.get('movies2')
+
+    this.getNewsData2();
+  //  console.log(JSON.stringify(this.list)); 
+});
+}else if( this.headlineDataB2)
+{
+this.service.getBusiness2().subscribe(actionArray => {
+  this.list2 = actionArray.map(a => {
+    const data = a.payload.doc.data() as News;
+    data.id = a.payload.doc.id;
+    // console.log(data);
+    return data; 
+  });
+  this.headlineData=  this.route.snapshot.paramMap.get('business2')
 
     this.getNewsData2();
   //  console.log(JSON.stringify(this.list)); 

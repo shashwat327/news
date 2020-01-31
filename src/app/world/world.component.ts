@@ -11,15 +11,19 @@ import { News } from '../shared/news.model';
 export class WorldComponent implements OnInit {
 
   list: News[];
+  list2: News[];
   constructor(private router: Router,private service:NewsService) { }
   goHome() {
     this.router.navigate(['']); 
   }
-  gotoIndia() {
-    this.router.navigate(['india']); 
+  gotoWorld() {
+    this.router.navigate(['world']); 
   }
   gotoBigNews(data) {
     this.router.navigate(['sub',{world:data}]);
+  }
+  gotoBigNews2(data) {
+    this.router.navigate(['sub',{world2:data}]);
   }
   
   ngOnInit() {
@@ -30,8 +34,18 @@ export class WorldComponent implements OnInit {
         // console.log(data);
         return data; 
       });
-      console.log(JSON.stringify(this.list)); 
+      // console.log(JSON.stringify(this.list)); 
    });
+
+   this.service.getWorld2().subscribe(actionArray => {
+    this.list2 = actionArray.map(a => {
+      const data = a.payload.doc.data() as News;
+      data.id = a.payload.doc.id;
+      // console.log(data);
+      return data; 
+    });
+    // console.log(JSON.stringify(this.list)); 
+ });
 }
 
 }

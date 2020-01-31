@@ -1,30 +1,21 @@
-import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgImageSliderModule, NgImageSliderComponent } from 'ng-image-slider';
 
 @Component({
-  selector: 'app-imgslider',
-  templateUrl: './imgslider.component.html',
-  styleUrls: ['./imgslider.component.css']
+  selector: 'app-imgslider2',
+  templateUrl: './imgslider2.component.html',
+  styleUrls: ['./imgslider2.component.css']
 })
-export class ImgsliderComponent implements OnInit {
-  scrHeight:any;
-  scrWidth:any;
-  sliderWidth:any;
-  sliderImageWidth: number;
-  ngOnInit(){ 
+export class Imgslider2Component implements OnInit {
 
-
-  }
-
+  ngOnInit(){ }
   
-
   @ViewChild('nav', {static: false}) ds: NgImageSliderComponent;
   title = 'Ng Image Slider';
   showSlider = true;
 
-  //  sliderWidth: Number = 1100;
-  
-  // sliderImageWidth: Number = 270;
+  sliderWidth: Number =810;
+  sliderImageWidth: Number = 270;
   sliderImageHeight: Number = 200;
   sliderArrowShow: Boolean = true;
   sliderInfinite: Boolean = false;
@@ -36,9 +27,7 @@ export class ImgsliderComponent implements OnInit {
 
   constructor() {
       this.setImageObject();
-      this.getScreenSize();
   }
-  
 
   onChangeHandler() {
       this.setImageObject();
@@ -47,42 +36,6 @@ export class ImgsliderComponent implements OnInit {
           this.showSlider = true;
       }, 10);
   }
-
-
-
-  
-  @HostListener('window:resize', ['$event'])
-  getScreenSize(event?) {
-        this.scrHeight = window.innerHeight;
-        this.scrWidth = window.innerWidth;
-        console.log(this.scrHeight.typeOf, this.scrWidth);
-        this.scrWidth>992 && this.scrWidth<1999
-        if(this.scrWidth>1200)
-        {
-          console.log(">1200");
-          this.sliderWidth = 1100;
-          this.sliderImageWidth = 270;
-        }else if (this.scrWidth>992 && this.scrWidth<1999){
-          console.log("992to1999");
-          this.sliderImageWidth = 350;
-          this.sliderWidth = 1050;
-        }else if (this.scrWidth>768 && this.scrWidth<991){
-          console.log("768to991");
-          this.sliderImageWidth = 290;
-          this.sliderWidth = 875;
-        }else if  ( this.scrWidth> 601 && this.scrWidth<767){
-          console.log("601to767");
-          this.sliderImageWidth =345;
-          this.sliderWidth = 700;
-        }else if  ( this.scrWidth<600){
-          console.log("<600");
-          this.sliderImageWidth = 390;
-          this.sliderWidth = 390;
-        }
-  
-      }
-
-
 
   setImageObject() {
       this.imageObject = [{
@@ -138,5 +91,5 @@ export class ImgsliderComponent implements OnInit {
   nextImageClick() {
       this.ds.next();
   }
-}
 
+}

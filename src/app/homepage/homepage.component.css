@@ -155,7 +155,7 @@ hr{
 
 
 
-@media only screen and (max-width: 601px) { 
+@media only screen and (max-width: 600px) { 
     .box{
         margin: 100px 10px 0;
         /* border:1px solid red; */
@@ -180,7 +180,8 @@ hr{
 
     }
     .home-headline-box{
-        height:120px;
+        /* height:170px; */
+        height:auto;
         box-shadow: 0px 5px 10px 2px grey;
     }
     .test{
@@ -203,7 +204,7 @@ hr{
 }
 
 
-@media only screen and (min-width: 600px) { 
+@media only screen and (min-width: 601px) { 
     .box{
         margin: 100px 10px 0;
         /* border:1px solid red; */
@@ -336,9 +337,7 @@ hr{
         width: 30px;
         height:20px;
     }
-    .carousel-inner{
-        background-color: rgb(255, 0, 191);
-    }
+   
 }
 
 
@@ -369,10 +368,5 @@ hr{
         width: 30px;
         height:20px;
     }
-    .carousel-inner{
-        background-color: aqua;
-    }
-    .carousel-item{
-        background-color: coral;
-    }
+   
 }

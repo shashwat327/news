@@ -48,7 +48,7 @@ export class IndiaComponent implements OnInit {
       // console.log(data);
       return data; 
     });
-    console.log(JSON.stringify(this.list2)); 
+    // console.log(JSON.stringify(this.list2)); 
  });
 
   }

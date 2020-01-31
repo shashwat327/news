@@ -23,18 +23,33 @@ export class NewsService {
   getWorld() {
     return this.firestore.collection('world').snapshotChanges();
   }
-  
+
+  getWorld2() {
+    return this.firestore.collection('world2').snapshotChanges();
+  }
 
   getSports() {
     return this.firestore.collection('sports').snapshotChanges();
+  }
+
+  getSports2() {
+    return this.firestore.collection('sports2').snapshotChanges();
   }
 
   getMovies() {
     return this.firestore.collection('movies').snapshotChanges();
   }
 
+  getMovies2() {
+    return this.firestore.collection('movies2').snapshotChanges();
+  }
+
   getBusiness() {
     return this.firestore.collection('business').snapshotChanges();
+  }
+
+  getBusiness2() {
+    return this.firestore.collection('business2').snapshotChanges();
   }
 
   GetBreak() {
