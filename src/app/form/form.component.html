@@ -1,3 +1,4 @@
+<ngx-ui-loader></ngx-ui-loader>
 <app-header></app-header>
 <div class="margin"></div>
 <div class="body">
@@ -11,17 +12,17 @@
                     alt="User Icon" />
                 <h1>Aaj Tak News</h1>
             </div>
-
+            <!-- gotoNewsDashboard() -->
             <!-- Login Form -->
             <form>
-                <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
-                <input  type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-                <input (click)="gotoNewsDashboard()" type="submit" class="fadeIn fourth" value="Log In">
+                <input [(ngModel)]="email" type="text" id="login" class="fadeIn second" name="login" placeholder="username">
+                <input [(ngModel)]="password"  type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+                <input  (click)="login()" type="submit" class="fadeIn fourth" value="Log In">
             </form>
 
             <!-- Remind Passowrd -->
             <div id="formFooter">
-                <a class="underlineHover" (click)="goHome() ">Go to Home Page</a>
+                <a class="underlineHover" (click)="goHome() ">Create An Account</a>
             </div>
 
         </div>

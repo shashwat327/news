@@ -39,6 +39,10 @@ export class NewsdashboardComponent implements OnInit {
   // }
 
   ngOnInit() {
+
+    
+  
+  
 this.newsform=this.formBuilder.group({
 
 category: new FormControl("",Validators.required),
@@ -48,10 +52,18 @@ description: new FormControl("",Validators.required),
 paragraph: new FormControl("",Validators.required),
 dateTime: new FormControl("",Validators.required),
 })
-
+if(sessionStorage.getItem("auth")=="success"){
+  console.log("insideif");
+}
+    else{
+      console.log("insideelse");
+      this.router.navigate(['form']);
+      
+    }
 }
 
 goHome() {
+sessionStorage.setItem("auth","");
   this.router.navigate(['']);
 }
 

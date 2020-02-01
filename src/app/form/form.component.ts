@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ConnectionService } from '../connection.service';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
+
 
 @Component({
   selector: 'app-form',
@@ -8,13 +11,27 @@ import { Router } from '@angular/router';
 })
 export class FormComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  email: string;
+  password:string;
+  constructor(   private router: Router, 
+                 private service:ConnectionService,
+                 private ngxService: NgxUiLoaderService) { }
   goHome() {
     this.router.navigate(['']); 
   }
   gotoNewsDashboard() {
     this.router.navigate(['dashboard']); 
   }
-  ngOnInit() {}
+  ngOnInit() {
+
+
+  }
+
+  login(){
+    this.ngxService.start();
+    this.service.gotoLogin(this.email, this.password);
+    this.email=this.password='';
+    this.ngxService.stop();
+  }
 
 }

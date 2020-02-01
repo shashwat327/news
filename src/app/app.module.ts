@@ -20,6 +20,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { AngularFireAuthModule, AngularFireAuth } from '@angular/fire/auth';
  
 
 import { AppComponent } from './app.component';
@@ -72,10 +73,10 @@ import { ContactusComponent } from './contactus/contactus.component';
     AngularFirestoreModule,  AngularFireStorageModule,
     OwlDateTimeModule, OwlNativeDateTimeModule,  NgxUiLoaderModule,
     MatDatepickerModule, MatNativeDateModule, NgMultiSelectDropDownModule.forRoot(),
-    NgbModule, NgImageSliderModule
+    NgbModule, NgImageSliderModule, AngularFireAuthModule, 
    
   ],
-  providers: [NewsService],
+  providers: [NewsService,AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

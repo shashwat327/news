@@ -55,6 +55,10 @@ export class NewsService {
   GetBreak() {
     return this.firestore.collection('breaknewz').snapshotChanges();
   }
+
+  getLogin() {
+    return this.firestore.collection('logindata').snapshotChanges();
+  }
 }
 
 
